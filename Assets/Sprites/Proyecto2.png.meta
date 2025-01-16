@@ -1,0 +1,609 @@
+fileFormatVersion: 2
+guid: 4014b274902f93a4581db031487faf77
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6183967216635626721
+    second: Proyecto2_0
+  - first:
+      213: -7831499801828640860
+    second: Proyecto2_1
+  - first:
+      213: -6659125192564641257
+    second: Proyecto2_2
+  - first:
+      213: 5628360656246747950
+    second: Proyecto2_3
+  - first:
+      213: 8049743651156030437
+    second: Proyecto2_4
+  - first:
+      213: -1228957352092316047
+    second: Proyecto2_5
+  - first:
+      213: 6252538464227510859
+    second: Proyecto2_6
+  - first:
+      213: 1872725538160047431
+    second: Proyecto2_7
+  - first:
+      213: 7182940560975384356
+    second: Proyecto2_8
+  - first:
+      213: -8591096588306430598
+    second: Proyecto2_9
+  - first:
+      213: 3854778038468190707
+    second: Proyecto2_10
+  - first:
+      213: -2321026483722704005
+    second: Proyecto2_11
+  - first:
+      213: 1730919819973544036
+    second: Proyecto2_12
+  - first:
+      213: 1185386186142239738
+    second: Proyecto2_13
+  - first:
+      213: 3502240424251946429
+    second: Proyecto2_14
+  - first:
+      213: -3545857244517910516
+    second: Proyecto2_15
+  - first:
+      213: -2982569001144574870
+    second: Proyecto2_16
+  - first:
+      213: 7997184272664656518
+    second: Proyecto2_17
+  - first:
+      213: 9095763053951216006
+    second: Proyecto2_18
+  - first:
+      213: -1325632272944518824
+    second: Proyecto2_19
+  - first:
+      213: 2260249728718973795
+    second: Proyecto2_20
+  - first:
+      213: 7512844679940064091
+    second: Proyecto2_21
+  - first:
+      213: 358580521539257966
+    second: Proyecto2_22
+  - first:
+      213: -1068297191585889606
+    second: Proyecto2_23
+  - first:
+      213: -5806526837938344539
+    second: Proyecto2_24
+  - first:
+      213: -274353333099078824
+    second: Proyecto2_25
+  - first:
+      213: 2170917460246750727
+    second: Proyecto2_26
+  - first:
+      213: 6902436091121886253
+    second: Proyecto2_27
+  - first:
+      213: -2613426887439787143
+    second: Proyecto2_28
+  - first:
+      213: -5182584751874383785
+    second: Proyecto2_29
+  - first:
+      213: -4932885391606837674
+    second: Proyecto2_30
+  - first:
+      213: 346747605260345115
+    second: Proyecto2_31
+  - first:
+      213: -4069564814001695560
+    second: Proyecto2_32
+  - first:
+      213: 3683858821445836813
+    second: Proyecto2_33
+  - first:
+      213: 6883651860673492161
+    second: Proyecto2_34
+  - first:
+      213: -700543732142445889
+    second: Proyecto2_35
+  - first:
+      213: 2497367884556981700
+    second: Proyecto2_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Proyecto2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1161
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e320f79bfdcad46a78a2576b8c5fc1
+      internalID: 2052876773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1161
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b77832e0e53ad4a9907bc31b85050b
+      internalID: 2060524418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1161
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7675eea8eb2e55a4d8a8f4d7c12fb3eb
+      internalID: -1060895552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_3
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1161
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36eea921398ded64f9a0aeaa0a896d92
+      internalID: 1062111487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 776
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e10087df573e545bc8d71022336942
+      internalID: 711829291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_5
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 776
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b74559bbf84c6a47825c3a81e1a62cf
+      internalID: 1204363439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_6
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 776
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a53c0407bab6e14899b43976006b54e
+      internalID: 1066350856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_7
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 776
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca700ad2cd70c84f8e9e2a1eaf25dbd
+      internalID: 1593730797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 391
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5513f4e592b4f934ea074832b9298767
+      internalID: 1743950885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 391
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a380bf72b32ef274b8a648ce41301ecc
+      internalID: 532899634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_10
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 391
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4223a5fcaabd64a9a1747df3ce6a3b
+      internalID: 1220765996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_11
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 391
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96a18a42929d1349b34277160bec9ef
+      internalID: -1299996456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecec339c9325bbc4ba1a76775ad83e5e
+      internalID: -620507219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_13
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 6
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a34ac6a372fe8d43b639febfc9a143a
+      internalID: -1419971010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_14
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 6
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc226373fd849f146a94a3587af93c1c
+      internalID: -816662625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Proyecto2_15
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 6
+        width: 270
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efea609cf188c3048a35a01b8960cd52
+      internalID: 930645553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ed39d6c4ea4c3ea4d90ef2f0896f75e4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Proyecto2_0: 2052876773
+      Proyecto2_1: 2060524418
+      Proyecto2_10: 1220765996
+      Proyecto2_11: -1299996456
+      Proyecto2_12: -620507219
+      Proyecto2_13: -1419971010
+      Proyecto2_14: -816662625
+      Proyecto2_15: 930645553
+      Proyecto2_2: -1060895552
+      Proyecto2_3: 1062111487
+      Proyecto2_4: 711829291
+      Proyecto2_5: 1204363439
+      Proyecto2_6: 1066350856
+      Proyecto2_7: 1593730797
+      Proyecto2_8: 1743950885
+      Proyecto2_9: 532899634
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
