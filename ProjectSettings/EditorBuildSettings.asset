@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vuforia.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4cefcd49a948eb4409ceb63c6ed86b36
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: ecc846e476b7590448d1ab466ef8d6d5
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: 615eb40d0de74624d9bf3bc6c2cefec0
+  - enabled: 1
+    path: Assets/Scenes/Library.unity
+    guid: 7bff9125ca8846d418fd6b75b40be531
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
