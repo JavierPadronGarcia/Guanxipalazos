@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Limit
-  - GunPosition
+  - Enemy
   layers:
   - Default
   - TransparentFX

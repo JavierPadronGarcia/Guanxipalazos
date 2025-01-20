@@ -1,22 +1,30 @@
 using UnityEngine;
-using static UnityEngine.CompositeCollider2D;
 
 public class EnemyShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public GameObject player;
-    public Transform playerPosition;
-    public float generationTime;
-    public float velocity;
+    public float generationTime = 2f;
+    public float velocity = 5f;
     private EnemyMovement.EnemyType enemyType;
+    private Transform player; // Referencia al jugador
+
+    private Enemy enemy; // Referencia al script Enemy
 
     void Start()
     {
-        //obtenemos el gameObject del jugador además del tipo de enemigo
-        player = GameObject.FindGameObjectWithTag("Player");
+        // Obtenemos el componente Enemy para reutilizar sus datos
+        enemy = GetComponent<Enemy>();
+        if (enemy == null)
+        {
+            Debug.LogError("El script Enemy no estï¿½ asignado al enemigo.");
+            return;
+        }
+
+        player = enemy.target;
+
+        // Obtenemos el tipo de enemigo
         enemyType = GetComponent<EnemyMovement>().enemyType;
 
-        //Si es de tipo Ranged hacemos que dispare constantemente
         if (enemyType == EnemyMovement.EnemyType.Ranged)
         {
             InvokeRepeating("Shoot", 0f, generationTime);
@@ -25,11 +33,13 @@ public class EnemyShoot : MonoBehaviour
 
     private void Shoot()
     {
-        //Obtenemos la dirección entre el jugador y el enemigo e instanciamos la bala
-        Vector2 direction = (player.transform.position - transform.position).normalized;
+        if (player == null || enemy == null) return;
+
+        // Instanciamos la bala y le damos direccion hacia el jugador
+        Vector2 direction = (player.position - transform.position).normalized;
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
 
-        //La bala instanciada se impulsa hacia el jugador
+        // Aplicamos velocidad a la bala
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {

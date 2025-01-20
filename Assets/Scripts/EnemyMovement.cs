@@ -3,7 +3,6 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float velocity = 3f;
-    public Transform player;
     public float targetDistance = 5f;
     public float rangeDistance = 10f;
 
@@ -15,54 +14,66 @@ public class EnemyMovement : MonoBehaviour
 
     public EnemyType enemyType;
 
+    private Transform player;
+    private Enemy enemy;
+
     private void Start()
     {
-        //Obtenemos el tipo de enemigo de forma aleatoria y obtenemos la posición del jugador
-        enemyType = (EnemyType)Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length);
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        enemy = GetComponent<Enemy>();
+        if (enemy == null)
+        {
+            Debug.LogError("El script Enemy no está asignado al enemigo.");
+            return;
+        }
+
+        player = enemy.target;
+
+        if (enemyType == 0)
+        {
+            enemyType = (EnemyType)Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length);
+        }
     }
 
     private void Update()
     {
-        if (player != null)
+        if (player == null) return;
+
+        switch (enemyType)
         {
-            //Determinamos el tipo de enemigo y realizamos su acción correspondiente
-            switch (enemyType)
-            {
-                case EnemyType.Melee:
-                    MoveToPlayer();
-                    break;
-                case EnemyType.Ranged:
-                    //Si es de tipo Ranged mantendremos una distancia entre él y el jugador
-                    float distance = Vector3.Distance(transform.position, player.position);
-                    //Si te alejas demasiado del enemigo se acercará lo suficiente al jugador para disparar
-                    if (distance > rangeDistance)
-                    {
-                        MoveToPlayer();
-                    }
-                    //Si el jugador se acerca demasiado al enemigo este se alejará de el
-                    else if (distance < targetDistance)
-                    {
-                        MoveAway();
-                    }
-                    break;
-                default:
-                    break;
-            }
+            case EnemyType.Melee:
+                MoveToPlayer();
+                break;
+            case EnemyType.Ranged:
+                HandleRangedBehavior();
+                break;
+            default:
+                break;
         }
     }
 
-    //Se encarga de hacer que el enemigo se mueva hacia el jugador
-    private void MoveToPlayer()
+    private void HandleRangedBehavior()
     {
-        transform.position = Vector3.MoveTowards(transform.position, player.position, velocity * Time.deltaTime);
+        float distance = Vector3.Distance(transform.position, player.position);
+
+        if (distance > rangeDistance)
+        {
+            MoveToPlayer();
+        }
+        else if (distance < targetDistance)
+        {
+            MoveAway();
+        }
     }
 
-    //Se encarga de hacer que el enemigo se aleje del jugador
+    private void MoveToPlayer()
+    {
+        Vector3 direction = (player.position - transform.position).normalized;
+        transform.position += direction * velocity * Time.deltaTime;
+    }
+
     private void MoveAway()
     {
         Vector3 directionAway = (transform.position - player.position).normalized;
         transform.position += directionAway * velocity * Time.deltaTime;
     }
-
 }
