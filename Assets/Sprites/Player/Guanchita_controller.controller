@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_2_Run
+  m_Name: Guanchita_run
   m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2e7380ae14579604183e413d5fddb722, type: 2}
+  m_Motion: {fileID: 7400000, guid: a49761994d6f0794d9d5e8f450501488, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -34,7 +34,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_2_Idle
+  m_Name: Guanchita_idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -48,7 +48,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c828dd6a296796e418131026a155ba1c, type: 2}
+  m_Motion: {fileID: 7400000, guid: d2bf22c9f75bdd1499477ab1bdf12387, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -60,7 +60,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Proyecto2_0
+  m_Name: Guanchita_controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: runing

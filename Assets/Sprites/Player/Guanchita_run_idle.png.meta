@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b82bbd03a2fdd614a9cd8a648ad3fc3c
+guid: 98f3f389b7066e64e92c245b22aaa52d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,11 +110,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ayose_run_idle_0
+      name: Guanchita_run_idle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3396
+        y: 2717
         width: 480
         height: 678
       alignment: 0
@@ -125,18 +125,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ce64e086e470114eb882e328942d32f
-      internalID: -1338472103
+      spriteID: 4e5dd0866546acc48b295548b9ce49a5
+      internalID: 1489937249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_1
+      name: Guanchita_run_idle_1
       rect:
         serializedVersion: 2
         x: 480
-        y: 3396
+        y: 2717
         width: 480
         height: 678
       alignment: 0
@@ -147,18 +147,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d7b9f97a96314c4cb45c98f7c60782c
-      internalID: -427180389
+      spriteID: 3ce1a46fc4dcd8847ac66df5b928f322
+      internalID: -255125005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_2
+      name: Guanchita_run_idle_2
       rect:
         serializedVersion: 2
         x: 960
-        y: 3396
+        y: 2717
         width: 480
         height: 678
       alignment: 0
@@ -169,18 +169,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 786014150407c474da42459b48e71b77
-      internalID: -700086706
+      spriteID: 028993964f72f984880127d9c954d342
+      internalID: -253476416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_3
+      name: Guanchita_run_idle_3
       rect:
         serializedVersion: 2
         x: 1440
-        y: 3396
+        y: 2717
         width: 480
         height: 678
       alignment: 0
@@ -191,18 +191,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26666aa3472abf048a376d10c1dda774
-      internalID: -1170123750
+      spriteID: fd8e06f81dfd36d429955a62360b56f3
+      internalID: -912100725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_4
+      name: Guanchita_run_idle_4
       rect:
         serializedVersion: 2
         x: 1920
-        y: 3396
+        y: 2717
         width: 480
         height: 678
       alignment: 0
@@ -213,18 +213,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af13b68ee036293419c7d10744cd7478
-      internalID: 1323325117
+      spriteID: 6a27a6750a26a0248a923eafc90e85da
+      internalID: 1442763226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_5
+      name: Guanchita_run_idle_5
       rect:
         serializedVersion: 2
         x: 2400
-        y: 3396
+        y: 2717
         width: 480
         height: 678
       alignment: 0
@@ -235,18 +235,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e73f85d8aeaf63e49935ae0690d8ba5d
-      internalID: -1781121720
+      spriteID: 73bb103ece981b0409897915f8eb28b0
+      internalID: -1468378528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_6
+      name: Guanchita_run_idle_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 2718
+        y: 2039
         width: 480
         height: 678
       alignment: 0
@@ -257,18 +257,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee7761c6b495b11468cd1892ceebc50c
-      internalID: 2090520543
+      spriteID: 6a8e9759e42788d43b10f2cc8ad7e261
+      internalID: 2114349023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_7
+      name: Guanchita_run_idle_7
       rect:
         serializedVersion: 2
         x: 480
-        y: 2718
+        y: 2039
         width: 480
         height: 678
       alignment: 0
@@ -279,18 +279,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17fd8e10db1a70948bab0135a980e83e
-      internalID: 1686776130
+      spriteID: 320ad4f535ad2d24fbe8d008eda46724
+      internalID: -1820026847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_8
+      name: Guanchita_run_idle_8
       rect:
         serializedVersion: 2
         x: 960
-        y: 2718
+        y: 2039
         width: 480
         height: 678
       alignment: 0
@@ -301,18 +301,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c81f0804c7db7bb41957a14040b29792
-      internalID: 967788089
+      spriteID: 43ce2ce3856a93c4493c558a3d5dbccd
+      internalID: 454976171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_9
+      name: Guanchita_run_idle_9
       rect:
         serializedVersion: 2
         x: 1440
-        y: 2718
+        y: 2039
         width: 480
         height: 678
       alignment: 0
@@ -323,18 +323,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ab00c36e7316094d826f5bb90389e7c
-      internalID: 241945136
+      spriteID: 201fd0af002763e4385a5b47fd0b4953
+      internalID: -1022042174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_10
+      name: Guanchita_run_idle_10
       rect:
         serializedVersion: 2
         x: 1920
-        y: 2718
+        y: 2039
         width: 480
         height: 678
       alignment: 0
@@ -345,18 +345,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7ec1198bc546844ea8858e08fb947cf
-      internalID: 1747818502
+      spriteID: 418c1a9c861e8004c8c53cc5da8a9c99
+      internalID: 1773470109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_11
+      name: Guanchita_run_idle_11
       rect:
         serializedVersion: 2
         x: 2400
-        y: 2718
+        y: 2039
         width: 480
         height: 678
       alignment: 0
@@ -367,18 +367,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68bbc524e152e9449927ff0290887b6e
-      internalID: -1635779332
+      spriteID: df31dae62b2b0554392cbb24a7ded155
+      internalID: 824237238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_12
+      name: Guanchita_run_idle_12
       rect:
         serializedVersion: 2
         x: 0
-        y: 2040
+        y: 1361
         width: 480
         height: 678
       alignment: 0
@@ -389,18 +389,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 058c2dd1381a42d4a85f21703e6bb9ee
-      internalID: -1190139846
+      spriteID: 9c30a30226d7c46408f73216410f5514
+      internalID: -1111970949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_13
+      name: Guanchita_run_idle_13
       rect:
         serializedVersion: 2
         x: 480
-        y: 2040
+        y: 1361
         width: 480
         height: 678
       alignment: 0
@@ -411,18 +411,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5c52060cf5944247a3b110e51ab2606
-      internalID: -928587467
+      spriteID: b39bd5fd45415e847b42b81e07f22ee9
+      internalID: 120156232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_14
+      name: Guanchita_run_idle_14
       rect:
         serializedVersion: 2
         x: 960
-        y: 2040
+        y: 1361
         width: 480
         height: 678
       alignment: 0
@@ -433,18 +433,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 635d5d1c9d6f2df409359e9be6034a6d
-      internalID: -460577599
+      spriteID: b792a1bfce5f8044facbe3b4bce7ef02
+      internalID: 1777742323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_15
+      name: Guanchita_run_idle_15
       rect:
         serializedVersion: 2
         x: 1440
-        y: 2040
+        y: 1361
         width: 480
         height: 678
       alignment: 0
@@ -455,18 +455,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd4343d6959b7ea46be7466c67936963
-      internalID: 272592552
+      spriteID: 28f3b80e7e5a5774da80a15fb7eb413c
+      internalID: 2090342303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_16
+      name: Guanchita_run_idle_16
       rect:
         serializedVersion: 2
         x: 1920
-        y: 2040
+        y: 1361
         width: 480
         height: 678
       alignment: 0
@@ -477,18 +477,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14d1ef608686d6647bfb578dac5f7433
-      internalID: -1451377260
+      spriteID: 7fea4ab1a022c3b47b5afb51fa75164b
+      internalID: -1291667107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_17
+      name: Guanchita_run_idle_17
       rect:
         serializedVersion: 2
         x: 2400
-        y: 2040
+        y: 1361
         width: 480
         height: 678
       alignment: 0
@@ -499,18 +499,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8cde78ea444e714c8906b7e77ce8e8c
-      internalID: -360786249
+      spriteID: 91a4f9c641ac42043876c11e5ce04cbf
+      internalID: 143668419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_18
+      name: Guanchita_run_idle_18
       rect:
         serializedVersion: 2
         x: 0
-        y: 1362
+        y: 683
         width: 480
         height: 678
       alignment: 0
@@ -521,18 +521,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b774f01658f21d74e9157ba96bbd4040
-      internalID: 582397642
+      spriteID: 33731604cfe4df84e869b7f05ff64987
+      internalID: -213605096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_19
+      name: Guanchita_run_idle_19
       rect:
         serializedVersion: 2
         x: 480
-        y: 1362
+        y: 683
         width: 480
         height: 678
       alignment: 0
@@ -543,18 +543,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 458609d52de008146893ea9025acb5af
-      internalID: 1100057706
+      spriteID: 42ede2aa9537f0b4f91bf1566c862610
+      internalID: -1120016264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_20
+      name: Guanchita_run_idle_20
       rect:
         serializedVersion: 2
         x: 960
-        y: 1362
+        y: 683
         width: 480
         height: 678
       alignment: 0
@@ -565,18 +565,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b63b7ff12233e2428c0bc9da2dfbd68
-      internalID: -375580972
+      spriteID: b11ebe0ae01c2cc4ca2823027482568d
+      internalID: 274854714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_21
+      name: Guanchita_run_idle_21
       rect:
         serializedVersion: 2
         x: 1440
-        y: 1362
+        y: 683
         width: 480
         height: 678
       alignment: 0
@@ -587,18 +587,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dab798c25d8fd14b814ab40017fb629
-      internalID: 1797273906
+      spriteID: d4e4b05399a37cd49960734a07913983
+      internalID: -1761340827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_22
+      name: Guanchita_run_idle_22
       rect:
         serializedVersion: 2
         x: 1920
-        y: 1362
+        y: 683
         width: 480
         height: 678
       alignment: 0
@@ -609,18 +609,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4259e5c314654e40b84c3ef6c4b60d6
-      internalID: -779318959
+      spriteID: 51d54f7a5f4a1b0448ad49cb24b570c7
+      internalID: 642149906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_23
+      name: Guanchita_run_idle_23
       rect:
         serializedVersion: 2
         x: 2400
-        y: 1362
+        y: 683
         width: 480
         height: 678
       alignment: 0
@@ -631,18 +631,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cf0a955bda5470449fb054d624ad110
-      internalID: -1186161694
+      spriteID: c53172fe30eb65a4dbd8d5dcec0bac9f
+      internalID: 1010945928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_24
+      name: Guanchita_run_idle_24
       rect:
         serializedVersion: 2
         x: 0
-        y: 684
+        y: 5
         width: 480
         height: 678
       alignment: 0
@@ -653,18 +653,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65d1052a0ae0f1f4e892397f6fe88b5b
-      internalID: 2037645246
+      spriteID: 8849f6f805469434c95863388ccd8f56
+      internalID: 661992764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_25
+      name: Guanchita_run_idle_25
       rect:
         serializedVersion: 2
         x: 480
-        y: 684
+        y: 5
         width: 480
         height: 678
       alignment: 0
@@ -675,18 +675,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ecda1c6f8e2bbc4281b35d11ab7a6e5
-      internalID: -1801327899
+      spriteID: ffc74be9328f40e4a908027e95bc5ce7
+      internalID: -2067963301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ayose_run_idle_26
+      name: Guanchita_run_idle_26
       rect:
         serializedVersion: 2
         x: 960
-        y: 684
+        y: 5
         width: 480
         height: 678
       alignment: 0
@@ -697,118 +697,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e6bffecdf1ca364facd711ee8c67934
-      internalID: 608045960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ayose_run_idle_27
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 684
-        width: 480
-        height: 678
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c8e15121a10e36418cb21aa715acf6e
-      internalID: 123157227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ayose_run_idle_28
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 684
-        width: 480
-        height: 678
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72fea3eb4ef23eb46bb3e4d565608159
-      internalID: 1059796023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ayose_run_idle_29
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 684
-        width: 480
-        height: 678
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7633b353e88531e4eb36d5c8df7245dc
-      internalID: -1815557314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ayose_run_idle_30
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 6
-        width: 480
-        height: 678
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35775725e0f0ed544b038d6d42d57e97
-      internalID: -959960391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ayose_run_idle_31
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 6
-        width: 480
-        height: 678
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da66f1190cdb369438419b2df4d52026
-      internalID: -2051497679
+      spriteID: 961ad9eeeb808ec46b644e2161844bfc
+      internalID: 1943080979
       vertices: []
       indices: 
       edges: []
@@ -817,7 +707,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e2d732642e0be1d438816b04b4825909
+    spriteID: 3b09fbc292b0e784387cd92d57d3e151
     internalID: 0
     vertices: []
     indices: 
@@ -827,38 +717,33 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ayose_run_idle_0: -1338472103
-      Ayose_run_idle_1: -427180389
-      Ayose_run_idle_10: 1747818502
-      Ayose_run_idle_11: -1635779332
-      Ayose_run_idle_12: -1190139846
-      Ayose_run_idle_13: -928587467
-      Ayose_run_idle_14: -460577599
-      Ayose_run_idle_15: 272592552
-      Ayose_run_idle_16: -1451377260
-      Ayose_run_idle_17: -360786249
-      Ayose_run_idle_18: 582397642
-      Ayose_run_idle_19: 1100057706
-      Ayose_run_idle_2: -700086706
-      Ayose_run_idle_20: -375580972
-      Ayose_run_idle_21: 1797273906
-      Ayose_run_idle_22: -779318959
-      Ayose_run_idle_23: -1186161694
-      Ayose_run_idle_24: 2037645246
-      Ayose_run_idle_25: -1801327899
-      Ayose_run_idle_26: 608045960
-      Ayose_run_idle_27: 123157227
-      Ayose_run_idle_28: 1059796023
-      Ayose_run_idle_29: -1815557314
-      Ayose_run_idle_3: -1170123750
-      Ayose_run_idle_30: -959960391
-      Ayose_run_idle_31: -2051497679
-      Ayose_run_idle_4: 1323325117
-      Ayose_run_idle_5: -1781121720
-      Ayose_run_idle_6: 2090520543
-      Ayose_run_idle_7: 1686776130
-      Ayose_run_idle_8: 967788089
-      Ayose_run_idle_9: 241945136
+      Guanchita_run_idle_0: 1489937249
+      Guanchita_run_idle_1: -255125005
+      Guanchita_run_idle_10: 1773470109
+      Guanchita_run_idle_11: 824237238
+      Guanchita_run_idle_12: -1111970949
+      Guanchita_run_idle_13: 120156232
+      Guanchita_run_idle_14: 1777742323
+      Guanchita_run_idle_15: 2090342303
+      Guanchita_run_idle_16: -1291667107
+      Guanchita_run_idle_17: 143668419
+      Guanchita_run_idle_18: -213605096
+      Guanchita_run_idle_19: -1120016264
+      Guanchita_run_idle_2: -253476416
+      Guanchita_run_idle_20: 274854714
+      Guanchita_run_idle_21: -1761340827
+      Guanchita_run_idle_22: 642149906
+      Guanchita_run_idle_23: 1010945928
+      Guanchita_run_idle_24: 661992764
+      Guanchita_run_idle_25: -2067963301
+      Guanchita_run_idle_26: 1943080979
+      Guanchita_run_idle_3: -912100725
+      Guanchita_run_idle_4: 1442763226
+      Guanchita_run_idle_5: -1468378528
+      Guanchita_run_idle_6: 2114349023
+      Guanchita_run_idle_7: -1820026847
+      Guanchita_run_idle_8: 454976171
+      Guanchita_run_idle_9: -1022042174
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
