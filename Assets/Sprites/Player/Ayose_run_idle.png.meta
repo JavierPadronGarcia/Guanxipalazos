@@ -1,0 +1,866 @@
+fileFormatVersion: 2
+guid: b82bbd03a2fdd614a9cd8a648ad3fc3c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ayose_run_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3396
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce64e086e470114eb882e328942d32f
+      internalID: -1338472103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 3396
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d7b9f97a96314c4cb45c98f7c60782c
+      internalID: -427180389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 3396
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786014150407c474da42459b48e71b77
+      internalID: -700086706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 3396
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26666aa3472abf048a376d10c1dda774
+      internalID: -1170123750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3396
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af13b68ee036293419c7d10744cd7478
+      internalID: 1323325117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_5
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 3396
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73f85d8aeaf63e49935ae0690d8ba5d
+      internalID: -1781121720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2718
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7761c6b495b11468cd1892ceebc50c
+      internalID: 2090520543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_7
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 2718
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17fd8e10db1a70948bab0135a980e83e
+      internalID: 1686776130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_8
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2718
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81f0804c7db7bb41957a14040b29792
+      internalID: 967788089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_9
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2718
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab00c36e7316094d826f5bb90389e7c
+      internalID: 241945136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2718
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ec1198bc546844ea8858e08fb947cf
+      internalID: 1747818502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_11
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2718
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68bbc524e152e9449927ff0290887b6e
+      internalID: -1635779332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2040
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058c2dd1381a42d4a85f21703e6bb9ee
+      internalID: -1190139846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_13
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 2040
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c52060cf5944247a3b110e51ab2606
+      internalID: -928587467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_14
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2040
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 635d5d1c9d6f2df409359e9be6034a6d
+      internalID: -460577599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_15
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2040
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4343d6959b7ea46be7466c67936963
+      internalID: 272592552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_16
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2040
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d1ef608686d6647bfb578dac5f7433
+      internalID: -1451377260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_17
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2040
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cde78ea444e714c8906b7e77ce8e8c
+      internalID: -360786249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1362
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b774f01658f21d74e9157ba96bbd4040
+      internalID: 582397642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1362
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458609d52de008146893ea9025acb5af
+      internalID: 1100057706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_20
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1362
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b63b7ff12233e2428c0bc9da2dfbd68
+      internalID: -375580972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_21
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1362
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dab798c25d8fd14b814ab40017fb629
+      internalID: 1797273906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_22
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1362
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4259e5c314654e40b84c3ef6c4b60d6
+      internalID: -779318959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_23
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1362
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf0a955bda5470449fb054d624ad110
+      internalID: -1186161694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 684
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d1052a0ae0f1f4e892397f6fe88b5b
+      internalID: 2037645246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_25
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 684
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecda1c6f8e2bbc4281b35d11ab7a6e5
+      internalID: -1801327899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_26
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 684
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6bffecdf1ca364facd711ee8c67934
+      internalID: 608045960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_27
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 684
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8e15121a10e36418cb21aa715acf6e
+      internalID: 123157227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_28
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 684
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fea3eb4ef23eb46bb3e4d565608159
+      internalID: 1059796023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_29
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 684
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7633b353e88531e4eb36d5c8df7245dc
+      internalID: -1815557314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35775725e0f0ed544b038d6d42d57e97
+      internalID: -959960391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ayose_run_idle_31
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 6
+        width: 480
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da66f1190cdb369438419b2df4d52026
+      internalID: -2051497679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e2d732642e0be1d438816b04b4825909
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ayose_run_idle_0: -1338472103
+      Ayose_run_idle_1: -427180389
+      Ayose_run_idle_10: 1747818502
+      Ayose_run_idle_11: -1635779332
+      Ayose_run_idle_12: -1190139846
+      Ayose_run_idle_13: -928587467
+      Ayose_run_idle_14: -460577599
+      Ayose_run_idle_15: 272592552
+      Ayose_run_idle_16: -1451377260
+      Ayose_run_idle_17: -360786249
+      Ayose_run_idle_18: 582397642
+      Ayose_run_idle_19: 1100057706
+      Ayose_run_idle_2: -700086706
+      Ayose_run_idle_20: -375580972
+      Ayose_run_idle_21: 1797273906
+      Ayose_run_idle_22: -779318959
+      Ayose_run_idle_23: -1186161694
+      Ayose_run_idle_24: 2037645246
+      Ayose_run_idle_25: -1801327899
+      Ayose_run_idle_26: 608045960
+      Ayose_run_idle_27: 123157227
+      Ayose_run_idle_28: 1059796023
+      Ayose_run_idle_29: -1815557314
+      Ayose_run_idle_3: -1170123750
+      Ayose_run_idle_30: -959960391
+      Ayose_run_idle_31: -2051497679
+      Ayose_run_idle_4: 1323325117
+      Ayose_run_idle_5: -1781121720
+      Ayose_run_idle_6: 2090520543
+      Ayose_run_idle_7: 1686776130
+      Ayose_run_idle_8: 967788089
+      Ayose_run_idle_9: 241945136
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
