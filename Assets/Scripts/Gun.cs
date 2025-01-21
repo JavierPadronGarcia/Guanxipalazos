@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     [SerializeField] float fireRate = 0.5f;
     [SerializeField] GameObject childSprite;
 
-    Transform player;
+    public Transform player;
     Vector2 offset;
 
     private float timeSinceLastShot = 0f;
@@ -21,7 +21,6 @@ public class Gun : MonoBehaviour
     {
         anim = childSprite.GetComponent<Animator>();
         timeSinceLastShot = fireRate;
-        player = GameObject.Find("Player").transform;
         SetOffset(new Vector2(1, 0.5f));
     }
 

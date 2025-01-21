@@ -8,22 +8,46 @@ public class Enemy : MonoBehaviour
 
     Animator anim;
     public Transform target;
+    GameObject[] players;
+
     void Start()
     {
         currentHealth = maxHealth;
-        target = GameObject.Find("Player").transform;
         anim = GetComponent<Animator>();
+        players = GameObject.FindGameObjectsWithTag("Player");
+        FindClosestPlayer();
     }
 
     void Update()
     {
+        FindClosestPlayer();
+
         if (target != null)
         {
             Vector3 direction = target.position - transform.position;
             direction.Normalize();
-            var playerToTheRight = target.position.x > transform.position.x;
+
+            bool playerToTheRight = target.position.x > transform.position.x;
             transform.localScale = new Vector2(playerToTheRight ? 1 : -1, 1);
         }
+    }
+
+    void FindClosestPlayer()
+    {
+        Transform closestPlayer = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (GameObject player in players)
+        {
+            float distance = Vector2.Distance(transform.position, player.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestPlayer = player.transform;
+            }
+        }
+
+        target = closestPlayer;
     }
 
     public void Hit(int damage)
