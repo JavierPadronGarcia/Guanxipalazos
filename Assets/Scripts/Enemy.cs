@@ -10,6 +10,9 @@ public class Enemy : MonoBehaviour
     public Transform target;
     GameObject[] players;
 
+    public delegate void EnemyDeathEvent(Enemy enemy);
+    public event EnemyDeathEvent OnDeath;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -57,7 +60,13 @@ public class Enemy : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        OnDeath?.Invoke(this);
+        Destroy(gameObject);
     }
 }

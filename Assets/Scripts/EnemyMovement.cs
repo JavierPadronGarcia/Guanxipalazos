@@ -16,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform player;
     private Enemy enemy;
+    private Animator animator;
 
     private void Start()
     {
@@ -28,9 +29,17 @@ public class EnemyMovement : MonoBehaviour
 
         player = enemy.target;
 
+        animator = GetComponent<Animator>();
+
+
         if (enemyType == 0)
         {
             enemyType = (EnemyType)Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length);
+        }
+
+        if (enemyType == EnemyType.Melee)
+        {
+            SetRunAnimation();
         }
     }
 
@@ -57,11 +66,19 @@ public class EnemyMovement : MonoBehaviour
 
         if (distance > rangeDistance)
         {
+
+            SetRunAnimation();
             MoveToPlayer();
         }
         else if (distance < targetDistance)
         {
+
+            SetRunAnimation();
             MoveAway();
+        }
+        else
+        {
+            SetIdleAnimation();
         }
     }
 
@@ -75,5 +92,17 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector3 directionAway = (transform.position - player.position).normalized;
         transform.position += directionAway * velocity * Time.deltaTime;
+    }
+
+    private void SetIdleAnimation()
+    {
+        animator.SetBool("Run", false);
+        animator.SetBool("Idle", true);
+    }
+
+    private void SetRunAnimation()
+    {
+        animator.SetBool("Run", true);
+        animator.SetBool("Idle", false);
     }
 }

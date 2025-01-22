@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -8,6 +10,7 @@ public class Gun : MonoBehaviour
 
     [SerializeField] float fireDistance = 10;
     [SerializeField] float fireRate = 0.5f;
+    [SerializeField] int gunDamage = 10;
     [SerializeField] GameObject childSprite;
 
     public Transform player;
@@ -16,12 +19,23 @@ public class Gun : MonoBehaviour
     private float timeSinceLastShot = 0f;
     Transform closestEnemy;
     Animator anim;
+    private GunMeleeRangeController meleeRangeController;
+    private bool ranged = false;
 
     private void Start()
     {
         anim = childSprite.GetComponent<Animator>();
         timeSinceLastShot = fireRate;
         SetOffset(new Vector2(1, 0.5f));
+
+        if (muzzle)
+        {
+            ranged = true;
+        }
+        else
+        {
+            meleeRangeController = transform.parent.GetComponent<GunMeleeRangeController>();
+        }
     }
 
     private void Update()
@@ -75,7 +89,7 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         anim.SetTrigger("Shoot");
-        if (muzzle)
+        if (ranged)
         {
             var muzzleGo = Instantiate(muzzle, muzzlePosition.position, transform.rotation);
             muzzleGo.transform.SetParent(transform);
@@ -83,7 +97,19 @@ public class Gun : MonoBehaviour
 
             var projectileGo = Instantiate(projectile, muzzlePosition.position, transform.rotation);
             Destroy(projectileGo, 3);
-        }  
+        }
+        else
+        {
+            List<Enemy> enemiesInRange = meleeRangeController.getEnemiesInRange();
+
+            foreach (var enemy in enemiesInRange)
+            {
+                if (enemy)
+                {
+                    enemy.GetComponent<Enemy>().Hit(gunDamage);
+                }
+            }
+        }
     }
 
     void SetOffset(Vector2 o)

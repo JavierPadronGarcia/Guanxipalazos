@@ -158,6 +158,8 @@ MonoBehaviour:
   muzzle: {fileID: 0}
   muzzlePosition: {fileID: 0}
   projectile: {fileID: 0}
-  fireDistance: 3
+  fireDistance: 4
   fireRate: 0.5
+  gunDamage: 10
   childSprite: {fileID: 3486044932173543162}
+  player: {fileID: 0}

@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1908067888501180159, guid: ade2d255f560036468c52656f6e8eeb5, type: 3}
       propertyPath: fireDistance
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5193832876190560111, guid: ade2d255f560036468c52656f6e8eeb5, type: 3}
       propertyPath: m_Name
-      value: Player Variant
+      value: Player_guanchita
       objectReference: {fileID: 0}
     - target: {fileID: 6948184668200179845, guid: ade2d255f560036468c52656f6e8eeb5, type: 3}
       propertyPath: m_Controller
