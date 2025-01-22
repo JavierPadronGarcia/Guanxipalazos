@@ -160,6 +160,7 @@ MonoBehaviour:
   projectile: {fileID: 0}
   fireDistance: 4
   fireRate: 0.5
-  gunDamage: 10
+  gunDamage: 30
   childSprite: {fileID: 3486044932173543162}
   player: {fileID: 0}
+  offset: {x: 1, y: 0.5}

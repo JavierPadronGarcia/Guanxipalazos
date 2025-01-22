@@ -14,7 +14,7 @@ public class Gun : MonoBehaviour
     [SerializeField] GameObject childSprite;
 
     public Transform player;
-    Vector2 offset;
+    public Vector2 offset;
 
     private float timeSinceLastShot = 0f;
     Transform closestEnemy;
@@ -26,7 +26,6 @@ public class Gun : MonoBehaviour
     {
         anim = childSprite.GetComponent<Animator>();
         timeSinceLastShot = fireRate;
-        SetOffset(new Vector2(1, 0.5f));
 
         if (muzzle)
         {
@@ -110,10 +109,5 @@ public class Gun : MonoBehaviour
                 }
             }
         }
-    }
-
-    void SetOffset(Vector2 o)
-    {
-        offset = o;
     }
 }
