@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 6277502151603474235}
   - component: {fileID: 4838431160067625644}
   - component: {fileID: 6948184668200179845}
-  m_Layer: 0
+  - component: {fileID: 1657143593877065828}
+  m_Layer: 6
   m_Name: Player_ayose
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -200,6 +201,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1657143593877065828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193832876190560111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 652a31f1ae2e3cd4aaf18b12dbccee47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &7698294707152826299
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +283,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 6
+  m_Radius: 5
 --- !u!114 &8055723532583338766
 MonoBehaviour:
   m_ObjectHideFlags: 0

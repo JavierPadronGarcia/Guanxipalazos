@@ -3,6 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] int maxHealth = 100;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     private int currentHealth;
 
@@ -31,7 +32,7 @@ public class Enemy : MonoBehaviour
             direction.Normalize();
 
             bool playerToTheRight = target.position.x > transform.position.x;
-            transform.localScale = new Vector2(playerToTheRight ? 1 : -1, 1);
+            spriteRenderer.flipX = !playerToTheRight;
         }
     }
 
@@ -42,11 +43,14 @@ public class Enemy : MonoBehaviour
 
         foreach (GameObject player in players)
         {
-            float distance = Vector2.Distance(transform.position, player.transform.position);
-            if (distance < closestDistance)
+            if (player)
             {
-                closestDistance = distance;
-                closestPlayer = player.transform;
+                float distance = Vector2.Distance(transform.position, player.transform.position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestPlayer = player.transform;
+                }
             }
         }
 

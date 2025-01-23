@@ -64,10 +64,6 @@ PrefabInstance:
       propertyPath: offset.y
       value: -0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2713656071171869553, guid: 07527d208428fd247a04fd166c8b5bb9, type: 3}
-      propertyPath: fireDistance
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 7452298576440327624, guid: 07527d208428fd247a04fd166c8b5bb9, type: 3}
       propertyPath: m_Name
       value: Gun_Magado
