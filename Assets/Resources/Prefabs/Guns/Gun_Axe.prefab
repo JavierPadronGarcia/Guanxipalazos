@@ -120,6 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 683296865356929452}
   - component: {fileID: 2713656071171869553}
+  - component: {fileID: 2060664064408867124}
   m_Layer: 0
   m_Name: Gun_Axe
   m_TagString: Untagged
@@ -164,3 +165,25 @@ MonoBehaviour:
   childSprite: {fileID: 3486044932173543162}
   player: {fileID: 0}
   offset: {x: 1, y: 0.5}
+--- !u!95 &2060664064408867124
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7452298576440327624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f8ba6cabe71b9954eab198c084a41caf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

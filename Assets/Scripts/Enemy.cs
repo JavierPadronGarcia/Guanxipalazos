@@ -1,9 +1,20 @@
+using System.Collections.Generic;
 using UnityEngine;
+
+[System.Serializable]
+public class EnemyTypeGunsDictionary
+{
+    public EnemyMovement.EnemyType key;
+    public GameObject value;
+}
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] int maxHealth = 100;
     [SerializeField] SpriteRenderer spriteRenderer;
+    public List<EnemyTypeGunsDictionary> enemyGunTypesEntries = new List<EnemyTypeGunsDictionary>();
+
+    private Dictionary<EnemyMovement.EnemyType, GameObject> enemyGunTypesDictionary;
 
     private int currentHealth;
 
@@ -13,6 +24,22 @@ public class Enemy : MonoBehaviour
 
     public delegate void EnemyDeathEvent(Enemy enemy);
     public event EnemyDeathEvent OnDeath;
+
+    private void Awake()
+    {
+        enemyGunTypesDictionary = new Dictionary<EnemyMovement.EnemyType, GameObject>();
+        foreach (var entry in enemyGunTypesEntries)
+        {
+            if (!enemyGunTypesDictionary.ContainsKey(entry.key))
+            {
+                enemyGunTypesDictionary.Add(entry.key, entry.value);
+            }
+            else
+            {
+                Debug.LogWarning($"Clave duplicada encontrada: {entry.key}");
+            }
+        }
+    }
 
     void Start()
     {

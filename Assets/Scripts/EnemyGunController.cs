@@ -79,6 +79,7 @@ public class EnemyGunController : MonoBehaviour
     {
         anim.SetTrigger("Shoot");
 
+        //ranged
         if (!isMelee && projectile != null && muzzlePosition != null)
         {
             var muzzleGo = Instantiate(muzzle, muzzlePosition.position, transform.rotation);
@@ -87,8 +88,20 @@ public class EnemyGunController : MonoBehaviour
 
             var projectileGo = Instantiate(projectile, muzzlePosition.position, transform.rotation);
             Destroy(projectileGo, 3);
+
+            Vector2 direction = (closestPlayer.position - transform.position).normalized;
+            GameObject bullet = Instantiate(projectile, muzzlePosition.position, Quaternion.identity);
+
+            // Aplicamos velocidad a la bala
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = direction * 10f;
+            }
             return;
         }
+
+        //melee
         LayerMask playerLayerMask = LayerMask.GetMask("PlayerLayer");
         RaycastHit2D hit = Physics2D.Raycast(meleeRaycastOrigin.position, transform.right, raycastLength, playerLayerMask);
         if (hit.collider != null && hit.collider.CompareTag("Player"))
