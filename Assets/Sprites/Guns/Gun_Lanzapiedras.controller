@@ -80,7 +80,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gun_Axe
+  m_Name: Gun_Lanzapiedras
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Shoot
@@ -113,10 +113,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 4514415665719690154}
-    m_Position: {x: 330, y: 170, z: 0}
+    m_Position: {x: 330, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4146013266283182367}
-    m_Position: {x: 330, y: 40, z: 0}
+    m_Position: {x: 330, y: 90, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions:
@@ -135,7 +135,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: alabarda_attack
+  m_Name: lanzapiedras_attack
   m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions:
@@ -149,7 +149,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 116c9b838b2be154c9b5e62bf405856d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 18ce0b4bb2b579a45a7eb6b0b61ffad8, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

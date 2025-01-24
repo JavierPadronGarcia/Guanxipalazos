@@ -80,7 +80,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gun_Axe
+  m_Name: Gun_Tabona
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Shoot
@@ -113,7 +113,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 4514415665719690154}
-    m_Position: {x: 330, y: 170, z: 0}
+    m_Position: {x: 320, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4146013266283182367}
     m_Position: {x: 330, y: 40, z: 0}
@@ -149,7 +149,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 116c9b838b2be154c9b5e62bf405856d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 45d1e4051f2a5c042b94015de5176157, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

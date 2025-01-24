@@ -88,7 +88,18 @@ public class Gun : MonoBehaviour
             muzzleGo.transform.SetParent(transform);
             Destroy(muzzleGo, 0.5f);
 
+            Vector2 direction = (closestEnemy.position - muzzlePosition.position).normalized;
             var projectileGo = Instantiate(projectile, muzzlePosition.position, transform.rotation);
+            BulletController bulletController = projectileGo.GetComponent<BulletController>();
+            bulletController.bulletDamage = gunDamage;
+            bulletController.spawnedBy = "Player";
+
+            Rigidbody2D rb = projectileGo.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.linearVelocity = direction * 10f;
+            }
+
             Destroy(projectileGo, 3);
         }
         else

@@ -20,7 +20,7 @@ public class EnemyGunController : MonoBehaviour
     [SerializeField] float raycastLength = 1.5f;
 
     private float timeSinceLastShot = 0f;
-    private  Transform parentPosition;
+    private Transform parentPosition;
     private Transform closestPlayer;
 
     private void Start()
@@ -91,6 +91,10 @@ public class EnemyGunController : MonoBehaviour
 
             Vector2 direction = (closestPlayer.position - muzzlePosition.position).normalized;
             var projectileGo = Instantiate(projectile, muzzlePosition.position, Quaternion.identity);
+
+            BulletController bulletController = projectileGo.GetComponent<BulletController>();
+            bulletController.bulletDamage = gunDamage;
+            bulletController.spawnedBy = "Enemy";
 
             Rigidbody2D rb = projectileGo.GetComponent<Rigidbody2D>();
             if (rb != null)
