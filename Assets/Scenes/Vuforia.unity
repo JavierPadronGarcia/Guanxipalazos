@@ -643,7 +643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.099, y: -0.1571}
+  m_AnchoredPosition: {x: 0.099, y: -0.2256}
   m_SizeDelta: {x: 0.2, y: 0.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550640452
@@ -666,19 +666,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt
-    lacus vel rutrum aliquet. Nunc mollis placerat neque, sed euismod lacus consectetur
-    ac. Nullam accumsan metus et dolor ultricies bibendum. Phasellus rhoncus vulputate
-    porta. Nulla ac finibus turpis, vel tempus neque. Praesent tempor vitae nibh
-    in eleifend. Quisque elit nisl, mattis .Nulla ac finibus turpis, vel tempus neque.
-    Praesent tempor vitae nibh in eleifend. Quisque elit nisl, mattis
-
-    Nulla
-    ac finibus turpis, vel tempus neque. Praesent tempor vitae nibh in eleifend.
-    Quisque elit nisl, mattis
-
-
-'
+  m_text: "Un aborigen que se hab\xEDa comportado de manera violenta y agresiva con
+    su tribu por lo que fue obligado a cortarse el pelo. Ahora que los castellanos
+    amenazan a su tierra de origen, quiere probarse ante su tribu para redimirse
+    y recuperar su respeto."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -712,7 +703,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -743,7 +734,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.014422402, y: -0.014689353, z: 0.008306295, w: -0.028625604}
+  m_margin: {x: 0.014422402, y: -0.014689353, z: 0.008306295, w: 0.09162823}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1081,7 +1072,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.099, y: -0.1097}
+  m_AnchoredPosition: {x: 0.099, y: -0.1541}
   m_SizeDelta: {x: 0.2, y: 0.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925601861
@@ -1104,7 +1095,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nombre personaje
+  m_text: Ayose
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
