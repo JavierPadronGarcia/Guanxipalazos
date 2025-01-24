@@ -24,9 +24,11 @@ public class Enemy : MonoBehaviour
     public event EnemyDeathEvent OnDeath;
 
     private Animator anim;
+    private EnemyMovement enemyMovementScript;
 
     private void Awake()
     {
+        // Inicializar el diccionario
         enemyGunTypesDictionary = new Dictionary<EnemyMovement.EnemyType, GameObject>();
         foreach (var entry in enemyGunTypesEntries)
         {
@@ -39,6 +41,17 @@ public class Enemy : MonoBehaviour
                 Debug.LogWarning($"Clave duplicada encontrada: {entry.key}");
             }
         }
+
+        // Inicializar el script EnemyMovement
+        enemyMovementScript = GetComponent<EnemyMovement>();
+        if (enemyMovementScript == null)
+        {
+            Debug.LogError("No se encontró el componente EnemyMovement en el GameObject.");
+            return;
+        }
+
+        // Activar el arma correspondiente
+        ActivateWeapon();
     }
 
     private void Start()
@@ -99,5 +112,17 @@ public class Enemy : MonoBehaviour
     {
         OnDeath?.Invoke(this);
         Destroy(gameObject);
+    }
+
+    private void ActivateWeapon()
+    {
+        if (enemyGunTypesDictionary.TryGetValue(enemyMovementScript.enemyType, out GameObject weapon))
+        {
+            weapon.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning($"No se encontró un arma para el tipo de enemigo: {enemyMovementScript.enemyType}");
+        }
     }
 }
