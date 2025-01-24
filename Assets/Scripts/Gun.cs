@@ -11,20 +11,17 @@ public class Gun : MonoBehaviour
     [SerializeField] float fireDistance = 10;
     [SerializeField] float fireRate = 0.5f;
     [SerializeField] int gunDamage = 10;
-    [SerializeField] GameObject childSprite;
+    [SerializeField] Animator childAnimator;
 
     public Transform player;
-    public Vector2 offset;
 
     private float timeSinceLastShot = 0f;
-    Transform closestEnemy;
-    Animator anim;
+    private Transform closestEnemy;
     private GunMeleeRangeController meleeRangeController;
     private bool ranged = false;
 
     private void Start()
     {
-        anim = childSprite.GetComponent<Animator>();
         timeSinceLastShot = fireRate;
 
         if (muzzle)
@@ -39,8 +36,6 @@ public class Gun : MonoBehaviour
 
     private void Update()
     {
-        transform.position = (Vector2)player.position + offset;
-
         FindClosestEnemy();
         AimAtEnemy();
         Shooting();
@@ -70,7 +65,6 @@ public class Gun : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
             transform.rotation = Quaternion.Euler(0, 0, angle);
-            transform.position = (Vector2)player.position + offset;
         }
     }
 
@@ -87,7 +81,7 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
-        anim.SetTrigger("Shoot");
+        childAnimator.SetTrigger("Shoot");
         if (ranged)
         {
             var muzzleGo = Instantiate(muzzle, muzzlePosition.position, transform.rotation);

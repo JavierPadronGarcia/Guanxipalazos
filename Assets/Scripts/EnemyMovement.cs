@@ -6,12 +6,7 @@ public class EnemyMovement : MonoBehaviour
     public float targetDistance = 5f;
     public float rangeDistance = 10f;
 
-    public enum EnemyType
-    {
-        Melee,
-        Ranged
-    }
-
+    public enum EnemyType { Melee, Ranged }
     public EnemyType enemyType;
 
     private Transform player;
@@ -28,14 +23,7 @@ public class EnemyMovement : MonoBehaviour
         }
 
         player = enemy.target;
-
         animator = GetComponent<Animator>();
-
-
-        if (enemyType == 0)
-        {
-            enemyType = (EnemyType)Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length);
-        }
 
         if (enemyType == EnemyType.Melee)
         {
@@ -55,8 +43,6 @@ public class EnemyMovement : MonoBehaviour
             case EnemyType.Ranged:
                 HandleRangedBehavior();
                 break;
-            default:
-                break;
         }
     }
 
@@ -66,13 +52,11 @@ public class EnemyMovement : MonoBehaviour
 
         if (distance > rangeDistance)
         {
-
             SetRunAnimation();
             MoveToPlayer();
         }
         else if (distance < targetDistance)
         {
-
             SetRunAnimation();
             MoveAway();
         }

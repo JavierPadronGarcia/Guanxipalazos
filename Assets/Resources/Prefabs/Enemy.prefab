@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2827425365367236992}
   - component: {fileID: 1429697839547685384}
   - component: {fileID: 2843022704194179786}
-  - component: {fileID: 2323696477547141143}
   - component: {fileID: 3797621488213317238}
   - component: {fileID: 2178676203480917346}
   m_Layer: 0
@@ -140,7 +139,6 @@ MonoBehaviour:
     value: {fileID: 1255743204929530340}
   - key: 1
     value: {fileID: 2561341782528862707}
-  target: {fileID: 0}
 --- !u!114 &2843022704194179786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,22 +154,7 @@ MonoBehaviour:
   velocity: 3
   targetDistance: 5
   rangeDistance: 10
-  enemyType: 0
---- !u!114 &2323696477547141143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3589757223132617723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f74727a75cb104faca66b0cba41f0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5309760981313864449, guid: f2c254d49807eb548ab7932fe1a122d7, type: 3}
-  generationTime: 2
-  velocity: 5
+  enemyType: 1
 --- !u!61 &3797621488213317238
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -281,9 +264,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3917802518409870647}
     m_Modifications:
+    - target: {fileID: 2374279704999389279, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374279704999389279, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
+      propertyPath: fireDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3135722549827573309, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
       propertyPath: m_Name
       value: Enemy_Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135722549827573309, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6812984431087524403, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
       propertyPath: m_LocalPosition.x

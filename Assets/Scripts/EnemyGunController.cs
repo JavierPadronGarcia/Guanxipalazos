@@ -3,21 +3,25 @@ using UnityEngine;
 
 public class EnemyGunController : MonoBehaviour
 {
-    [SerializeField] GameObject muzzle;
-    [SerializeField] Transform muzzlePosition;
-    [SerializeField] GameObject projectile;
+    [Header("Opciones generales")]
     [SerializeField] float fireRate = 0.5f;
     [SerializeField] float fireDistance = 10f;
     [SerializeField] int gunDamage = 10;
-    [SerializeField] Vector2 offset;
     [SerializeField] Animator anim;
-    [SerializeField] float raycastLength = 1.5f;
+
+    [Header("Arma a distancia")]
+    [SerializeField] GameObject muzzle;
+    [SerializeField] Transform muzzlePosition;
+    [SerializeField] GameObject projectile;
+
+    [Header("Arma melee")]
     [SerializeField] bool isMelee = false;
     [SerializeField] Transform meleeRaycastOrigin;
+    [SerializeField] float raycastLength = 1.5f;
 
-    [SerializeField] float timeSinceLastShot = 0f;
-    [SerializeField] Transform parentPosition;
-    [SerializeField] Transform closestPlayer;
+    private float timeSinceLastShot = 0f;
+    private  Transform parentPosition;
+    private Transform closestPlayer;
 
     private void Start()
     {
@@ -27,7 +31,7 @@ public class EnemyGunController : MonoBehaviour
 
     private void Update()
     {
-        transform.position = (Vector2)parentPosition.position + offset;
+        transform.position = (Vector2)parentPosition.position;
         FindClosestPlayer();
         AimAtPlayer();
         Shooting();
@@ -79,38 +83,36 @@ public class EnemyGunController : MonoBehaviour
     {
         anim.SetTrigger("Shoot");
 
-        //ranged
         if (!isMelee && projectile != null && muzzlePosition != null)
         {
             var muzzleGo = Instantiate(muzzle, muzzlePosition.position, transform.rotation);
             muzzleGo.transform.SetParent(transform);
-            Destroy(muzzleGo, 0.5f);
+            Destroy(muzzleGo, 0.2f);
 
-            var projectileGo = Instantiate(projectile, muzzlePosition.position, transform.rotation);
-            Destroy(projectileGo, 3);
+            Vector2 direction = (closestPlayer.position - muzzlePosition.position).normalized;
+            var projectileGo = Instantiate(projectile, muzzlePosition.position, Quaternion.identity);
 
-            Vector2 direction = (closestPlayer.position - transform.position).normalized;
-            GameObject bullet = Instantiate(projectile, muzzlePosition.position, Quaternion.identity);
-
-            // Aplicamos velocidad a la bala
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            Rigidbody2D rb = projectileGo.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
                 rb.linearVelocity = direction * 10f;
             }
-            return;
+
+            Destroy(projectileGo, 3);
         }
 
-        //melee
-        LayerMask playerLayerMask = LayerMask.GetMask("PlayerLayer");
-        RaycastHit2D hit = Physics2D.Raycast(meleeRaycastOrigin.position, transform.right, raycastLength, playerLayerMask);
-        if (hit.collider != null && hit.collider.CompareTag("Player"))
+        if (isMelee)
         {
-            Debug.Log("ColisionConJugador");
-            PlayerHealth playerHealth = hit.collider.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            LayerMask playerLayerMask = LayerMask.GetMask("PlayerLayer");
+            RaycastHit2D hit = Physics2D.Raycast(meleeRaycastOrigin.position, transform.right, raycastLength, playerLayerMask);
+            if (hit.collider != null && hit.collider.CompareTag("Player"))
             {
-                playerHealth.Hit(gunDamage);
+                Debug.Log("ColisionConJugador");
+                PlayerHealth playerHealth = hit.collider.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
+                {
+                    playerHealth.Hit(gunDamage);
+                }
             }
         }
     }

@@ -10,20 +10,20 @@ public class EnemyTypeGunsDictionary
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] int maxHealth = 100;
-    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     public List<EnemyTypeGunsDictionary> enemyGunTypesEntries = new List<EnemyTypeGunsDictionary>();
 
     private Dictionary<EnemyMovement.EnemyType, GameObject> enemyGunTypesDictionary;
-
     private int currentHealth;
 
-    Animator anim;
     public Transform target;
-    GameObject[] players;
+    private GameObject[] players;
 
     public delegate void EnemyDeathEvent(Enemy enemy);
     public event EnemyDeathEvent OnDeath;
+
+    private Animator anim;
 
     private void Awake()
     {
@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
         currentHealth = maxHealth;
         anim = GetComponent<Animator>();
@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
         FindClosestPlayer();
     }
 
-    void Update()
+    private void Update()
     {
         FindClosestPlayer();
 
@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void FindClosestPlayer()
+    private void FindClosestPlayer()
     {
         Transform closestPlayer = null;
         float closestDistance = Mathf.Infinity;
