@@ -8,7 +8,6 @@ public class EnemyMovement : MonoBehaviour
 
     public enum EnemyType { Melee, Ranged }
     public EnemyType enemyType;
-
     private Transform player;
     private Enemy enemy;
     private Animator animator;

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static EnemyMovement;
 
 [System.Serializable]
 public class EnemyTypeGunsDictionary
@@ -44,6 +45,7 @@ public class Enemy : MonoBehaviour
 
         // Inicializar el script EnemyMovement
         enemyMovementScript = GetComponent<EnemyMovement>();
+        enemyMovementScript.enemyType = (EnemyType)Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length);
         if (enemyMovementScript == null)
         {
             Debug.LogError("No se encontró el componente EnemyMovement en el GameObject.");
@@ -118,6 +120,8 @@ public class Enemy : MonoBehaviour
     {
         if (enemyGunTypesDictionary.TryGetValue(enemyMovementScript.enemyType, out GameObject weapon))
         {
+            Debug.Log(weapon.name);
+            Debug.Log(enemyMovementScript.enemyType);
             weapon.SetActive(true);
         }
         else

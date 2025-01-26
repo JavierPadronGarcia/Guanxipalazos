@@ -130,4 +130,9 @@ public class EnemyGunController : MonoBehaviour
             Gizmos.DrawLine(raycastOrigin.position, raycastOrigin.position + transform.right * raycastLength);
         }
     }
+
+    public Transform GetClosestPlayer()
+    {
+        return closestPlayer;
+    }
 }

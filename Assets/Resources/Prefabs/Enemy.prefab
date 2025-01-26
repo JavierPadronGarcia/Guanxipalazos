@@ -139,6 +139,7 @@ MonoBehaviour:
     value: {fileID: 1255743204929530340}
   - key: 1
     value: {fileID: 2561341782528862707}
+  target: {fileID: 0}
 --- !u!114 &2843022704194179786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +155,7 @@ MonoBehaviour:
   velocity: 3
   targetDistance: 5
   rangeDistance: 10
-  enemyType: 1
+  enemyType: 0
 --- !u!61 &3797621488213317238
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -272,6 +273,14 @@ PrefabInstance:
       propertyPath: fireDistance
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2866477076883376289, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
+      propertyPath: enemyGunController
+      value: 
+      objectReference: {fileID: 2953454274076497809}
+    - target: {fileID: 2866477076883376289, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
+      propertyPath: parentEnemySpriteRenderer
+      value: 
+      objectReference: {fileID: 7541853481899130021}
     - target: {fileID: 3135722549827573309, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
       propertyPath: m_Name
       value: Enemy_Gun
@@ -330,6 +339,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3135722549827573309, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
   m_PrefabInstance: {fileID: 580935542621355982}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2953454274076497809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2374279704999389279, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
+  m_PrefabInstance: {fileID: 580935542621355982}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561341782528862707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdca999af3195e5409a5e84885c40ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6233950493969032701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6812984431087524403, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
