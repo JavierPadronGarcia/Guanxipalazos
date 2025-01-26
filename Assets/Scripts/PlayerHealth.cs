@@ -5,8 +5,11 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 100f;
     public float health = 100f;
 
+    private BoxCollider2D boxCollider2D;
+
     private void Start()
     {
+        boxCollider2D = GetComponent<BoxCollider2D>();
         maxHealth = health;
     }
 
@@ -42,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Heal"))
+        if (boxCollider2D.IsTouching(collision) && collision.CompareTag("Heal"))
         {
             HealItemController healItemControler = collision.GetComponent<HealItemController>();
             Debug.Log(healItemControler);
