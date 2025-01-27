@@ -4,10 +4,20 @@ public class BulletController : MonoBehaviour
 {
     public int bulletDamage = 0;
     public string spawnedBy = "";
+    public bool rotatingBullet = false;
+    public float rotationSpeed = 360f;
+
+    private void Update()
+    {
+        if (rotatingBullet)
+        {
+            transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Si la bala colisiona con la pared, se destruye
+
         if (collision.CompareTag("Limit"))
         {
             Destroy(this.gameObject);

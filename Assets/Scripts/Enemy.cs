@@ -120,8 +120,6 @@ public class Enemy : MonoBehaviour
     {
         if (enemyGunTypesDictionary.TryGetValue(enemyMovementScript.enemyType, out GameObject weapon))
         {
-            Debug.Log(weapon.name);
-            Debug.Log(enemyMovementScript.enemyType);
             weapon.SetActive(true);
         }
         else

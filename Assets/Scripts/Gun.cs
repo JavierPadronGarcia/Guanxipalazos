@@ -99,8 +99,6 @@ public class Gun : MonoBehaviour
             {
                 rb.linearVelocity = direction * 10f;
             }
-
-            Destroy(projectileGo, 3);
         }
         else
         {
