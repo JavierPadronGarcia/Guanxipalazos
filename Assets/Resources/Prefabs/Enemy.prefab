@@ -134,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   spriteRenderer: {fileID: 7541853481899130021}
+  coinPrefab: {fileID: 3653526382387486446, guid: 20d2eb6914d93a14b920cef550218710, type: 3}
   enemyGunTypesEntries:
   - key: 0
     value: {fileID: 1255743204929530340}

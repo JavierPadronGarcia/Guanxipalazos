@@ -17,6 +17,12 @@ public class WaveManager : MonoBehaviour
     private int currentWave = 0; // Número de la oleada actual
     private int enemiesSpawned; // Contador de enemigos spawneados
     private bool waveActive; // Indica si la oleada está activa
+    private PerlinSpawner perlinHealsSpawner;
+
+    private void Awake()
+    {
+        perlinHealsSpawner = GetComponent<PerlinSpawner>();
+    }
 
     private void Start()
     {
@@ -37,9 +43,11 @@ public class WaveManager : MonoBehaviour
         StopAllCoroutines();
         GameObject[] enemiesAlive = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] remainingBullets = GameObject.FindGameObjectsWithTag("Bullet");
+        GameObject[] remainingHeals = GameObject.FindGameObjectsWithTag("Heal");
 
         foreach (var enemy in enemiesAlive) Destroy(enemy);
         foreach (var bullet in remainingBullets) Destroy(bullet);
+        foreach (var heal in remainingHeals) Destroy(heal);
 
         Time.timeScale = 0f;
         SceneManager.LoadScene(selectionMenuScene, LoadSceneMode.Additive);
@@ -65,6 +73,7 @@ public class WaveManager : MonoBehaviour
         Debug.Log($"Iniciando oleada {currentWave}");
         StartCoroutine(WaveTimer());
         StartCoroutine(SpawnEnemies());
+        perlinHealsSpawner.StartNewWave();
     }
 
     private IEnumerator WaveTimer()

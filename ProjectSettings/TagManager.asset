@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - Heal
+  - Coin
   layers:
   - Default
   - TransparentFX
