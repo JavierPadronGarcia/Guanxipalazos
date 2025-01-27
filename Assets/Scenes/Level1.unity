@@ -226,7 +226,7 @@ MonoBehaviour:
   spawnArea: {x: 30, y: 18}
   initialEnemiesPerWave: 5
   spawnInterval: 2
-  waveDuration: 30
+  waveDuration: 10
   enemiesIncrementPerWave: 2
 --- !u!114 &484780568
 MonoBehaviour:
@@ -243,7 +243,7 @@ MonoBehaviour:
   prefab: {fileID: 7582377494530132479, guid: 129cb97b0d5428e4d99da61ae9a53e67, type: 3}
   areaSize: {x: 30, y: 18}
   density: 10
-  spawnCount: 0
+  spawnCount: 2
   totalHealsPerWave: 10
   spawnInterval: 1
 --- !u!1 &519420028

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static EnemyMovement;
 
 [System.Serializable]
 public class EnemyTypeGunsDictionary
@@ -13,6 +12,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] GameObject coinPrefab;
     public List<EnemyTypeGunsDictionary> enemyGunTypesEntries = new List<EnemyTypeGunsDictionary>();
 
     private Dictionary<EnemyMovement.EnemyType, GameObject> enemyGunTypesDictionary;
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
 
         // Inicializar el script EnemyMovement
         enemyMovementScript = GetComponent<EnemyMovement>();
-        enemyMovementScript.enemyType = (EnemyType)Random.Range(0, System.Enum.GetValues(typeof(EnemyType)).Length);
+        enemyMovementScript.enemyType = (EnemyMovement.EnemyType)Random.Range(0, System.Enum.GetValues(typeof(EnemyMovement.EnemyType)).Length);
         if (enemyMovementScript == null)
         {
             Debug.LogError("No se encontró el componente EnemyMovement en el GameObject.");
@@ -112,6 +112,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        Instantiate(coinPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
         OnDeath?.Invoke(this);
         Destroy(gameObject);
     }

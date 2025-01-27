@@ -13,18 +13,23 @@ public class PerlinSpawner : MonoBehaviour
     private float seedX;
     private float seedY;
     private int spawnedCount;
+    private Coroutine spawnCoroutine;
 
     private void Start()
     {
         seedX = Random.Range(0f, 100f);
         seedY = Random.Range(0f, 100f);
-        StartNewWave();
     }
 
     public void StartNewWave()
     {
+        if (spawnCoroutine != null)
+        {
+            StopCoroutine(spawnCoroutine);
+        }
+
         spawnedCount = 0;
-        StartCoroutine(SpawnObjects());
+        spawnCoroutine = StartCoroutine(SpawnObjects());
     }
 
     private IEnumerator SpawnObjects()
@@ -42,5 +47,7 @@ public class PerlinSpawner : MonoBehaviour
 
             yield return new WaitForSeconds(spawnInterval);
         }
+
+        spawnCoroutine = null;
     }
 }
