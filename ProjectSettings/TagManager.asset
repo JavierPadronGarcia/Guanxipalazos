@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Heal
   - Coin
+  - Face
   layers:
   - Default
   - TransparentFX
