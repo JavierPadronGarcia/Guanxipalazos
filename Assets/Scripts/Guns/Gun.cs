@@ -8,9 +8,11 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform muzzlePosition;
     [SerializeField] GameObject projectile;
 
-    [SerializeField] float fireDistance = 10;
-    [SerializeField] float fireRate = 0.5f;
-    [SerializeField] int gunDamage = 10;
+    public string gunName;
+    public float fireDistance = 10;
+    public float fireRate = 0.5f;
+    public int gunDamage = 10;
+
     [SerializeField] Animator childAnimator;
 
     public Transform player;

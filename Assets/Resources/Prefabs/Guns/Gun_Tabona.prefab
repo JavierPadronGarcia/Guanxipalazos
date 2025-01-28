@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 2bd3c1337e339ac429e4a394b84f9a4b, type: 3}
+    - target: {fileID: 2713656071171869553, guid: 07527d208428fd247a04fd166c8b5bb9, type: 3}
+      propertyPath: gunName
+      value: tabona
+      objectReference: {fileID: 0}
     - target: {fileID: 7452298576440327624, guid: 07527d208428fd247a04fd166c8b5bb9, type: 3}
       propertyPath: m_Name
       value: Gun_Tabona
