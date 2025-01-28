@@ -57,6 +57,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0818092500df5104f9b03f4a0cf094f3, type: 3}
     - target: {fileID: 2713656071171869553, guid: 07527d208428fd247a04fd166c8b5bb9, type: 3}
+      propertyPath: gunName
+      value: magado
+      objectReference: {fileID: 0}
+    - target: {fileID: 2713656071171869553, guid: 07527d208428fd247a04fd166c8b5bb9, type: 3}
       propertyPath: fireRate
       value: 0.5
       objectReference: {fileID: 0}

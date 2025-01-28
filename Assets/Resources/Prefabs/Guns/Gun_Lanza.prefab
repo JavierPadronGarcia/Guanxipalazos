@@ -104,6 +104,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7452347183262923563, guid: 5c51c0cf654a0c34fae1dfc1d05e3a95, type: 3}
     - target: {fileID: 2713656071171869553, guid: 07527d208428fd247a04fd166c8b5bb9, type: 3}
+      propertyPath: gunName
+      value: lanza
+      objectReference: {fileID: 0}
+    - target: {fileID: 2713656071171869553, guid: 07527d208428fd247a04fd166c8b5bb9, type: 3}
       propertyPath: projectile
       value: 
       objectReference: {fileID: 6029660016995008134, guid: 9abfa214bb9deb2488928323ddcf7e73, type: 3}
