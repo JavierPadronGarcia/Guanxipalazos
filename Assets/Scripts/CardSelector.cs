@@ -10,11 +10,17 @@ public class CardSelector : MonoBehaviour
     private int currentIndex = 0;
     private float inputCooldown = 0.2f;
     private float lastInputTime = 0f;
+    private GameObject[] players;
 
     [Header("Colores de Selección")]
     public Color selectedColor = Color.green;
     public Color defaultColor = Color.white;
     public Color disabledColor = Color.gray;
+
+    private void Awake()
+    {
+        this.players = GameObject.FindGameObjectsWithTag("Player");
+    }
 
     void Start()
     {

@@ -757,5 +757,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf5619e212a5b448ddc96166c1d970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gunAttributes:
+    fireDistanceIncrease: 0
+    fireRateIncrease: 0
+    gunDamageIncrease: 0
+  isBaseGun: 0
+  isHeal: 1
+  gunName: 
   money: 50
   moneyText: {fileID: 5515974657389870757}

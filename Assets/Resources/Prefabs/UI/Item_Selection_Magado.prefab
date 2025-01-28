@@ -430,6 +430,7 @@ GameObject:
   - component: {fileID: 622201484861916847}
   - component: {fileID: 1767361799352392466}
   - component: {fileID: 6000790562930293952}
+  - component: {fileID: -5333959260330445662}
   m_Layer: 5
   m_Name: Item_Selection_Magado
   m_TagString: Untagged
@@ -498,3 +499,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-5333959260330445662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8217725213549271546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cf5619e212a5b448ddc96166c1d970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunAttributes:
+    fireDistanceIncrease: 0
+    fireRateIncrease: 0
+    gunDamageIncrease: 0
+  isBaseGun: 1
+  isHeal: 0
+  gunName: magado
+  money: 80
+  moneyText: {fileID: 104220487953193571, guid: d303f48fc9b216e4a9925297cf8937b2, type: 3}
