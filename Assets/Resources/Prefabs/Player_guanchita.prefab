@@ -20,6 +20,18 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 4.5208626
       objectReference: {fileID: 0}
+    - target: {fileID: 1657143593877065828, guid: ade2d255f560036468c52656f6e8eeb5, type: 3}
+      propertyPath: Face1
+      value: 
+      objectReference: {fileID: 21300000, guid: 952abdc141156d145829c2fa9af18ccc, type: 3}
+    - target: {fileID: 1657143593877065828, guid: ade2d255f560036468c52656f6e8eeb5, type: 3}
+      propertyPath: Face2
+      value: 
+      objectReference: {fileID: 21300000, guid: fd75a3befe6d0da40aea7d15f86a8d33, type: 3}
+    - target: {fileID: 1657143593877065828, guid: ade2d255f560036468c52656f6e8eeb5, type: 3}
+      propertyPath: Face3
+      value: 
+      objectReference: {fileID: 21300000, guid: 93e51deb359342c49a2d6395afa0df2d, type: 3}
     - target: {fileID: 1908067888501180159, guid: ade2d255f560036468c52656f6e8eeb5, type: 3}
       propertyPath: fireDistance
       value: 4

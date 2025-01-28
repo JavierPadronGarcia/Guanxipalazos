@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     public float health = 100f;
+
+    private Image PF;
+    public Sprite Face1, Face2, Face3;
 
     private BoxCollider2D boxCollider2D;
 
@@ -11,8 +15,30 @@ public class PlayerHealth : MonoBehaviour
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
         maxHealth = health;
+        PF = GameObject.FindGameObjectWithTag("Face").GetComponent<Image>();
     }
 
+    private void Update()
+    {
+        CheckHealthAndChangeImage();
+    }
+
+
+    private void CheckHealthAndChangeImage()
+    {
+        if (health > 70)
+        {
+            PF.sprite = Face1;
+        } else if (health <70 && health > 30)
+        { 
+            PF.sprite = Face2;
+        }
+        else if (health < 30)
+        {
+            PF.sprite = Face3;
+        }
+
+    }
     public void Hit(float damage)
     {
         health -= damage;

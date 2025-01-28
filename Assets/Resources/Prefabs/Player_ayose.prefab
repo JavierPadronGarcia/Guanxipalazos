@@ -216,6 +216,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
+  imageGameObject: {fileID: 0}
+  Face1: {fileID: 21300000, guid: 5fd6850eb3fd3b04b92ae7409761f93b, type: 3}
+  Face2: {fileID: 21300000, guid: 809d340ff91998b4c8f4e8e2b144d0c6, type: 3}
+  Face3: {fileID: 21300000, guid: adf96677d0cce034f9320bdddac717d0, type: 3}
 --- !u!114 &7866224047757367627
 MonoBehaviour:
   m_ObjectHideFlags: 0
