@@ -50,4 +50,9 @@ public class PerlinSpawner : MonoBehaviour
 
         spawnCoroutine = null;
     }
+
+    public void StopCoroutines()
+    {
+        StopAllCoroutines();
+    }
 }

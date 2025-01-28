@@ -6,17 +6,17 @@ public class WaveManager : MonoBehaviour
 {
     public string selectionMenuScene = "SelectionMenu";
 
-    public GameObject enemyPrefab; // Prefab de los enemigos
-    public Vector2 spawnArea = new Vector2(10f, 10f); // Área de spawn para enemigos
-    public int initialEnemiesPerWave = 5; // Enemigos iniciales por oleada
-    public float spawnInterval = 2f; // Intervalo entre spawns
-    public float waveDuration = 30f; // Duración de cada oleada
-    public int enemiesIncrementPerWave = 2; // Incremento de enemigos por oleada
+    public GameObject enemyPrefab;
+    public Vector2 spawnArea = new Vector2(10f, 10f);
+    public int initialEnemiesPerWave = 5;
+    public float spawnInterval = 2f;
+    public float waveDuration = 30f;
+    public int enemiesIncrementPerWave = 2;
 
-    private bool isMenuActive = false; // Indica si el menú está cargado
-    private int currentWave = 0; // Número de la oleada actual
-    private int enemiesSpawned; // Contador de enemigos spawneados
-    private bool waveActive; // Indica si la oleada está activa
+    private bool isMenuActive = false;
+    private int currentWave = 0;
+    private int enemiesSpawned;
+    private bool waveActive;
     private PerlinSpawner perlinHealsSpawner;
 
     private void Awake()
@@ -41,6 +41,8 @@ public class WaveManager : MonoBehaviour
     {
         waveActive = false;
         StopAllCoroutines();
+        perlinHealsSpawner.StopCoroutines();
+
         GameObject[] enemiesAlive = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] remainingBullets = GameObject.FindGameObjectsWithTag("Bullet");
         GameObject[] remainingHeals = GameObject.FindGameObjectsWithTag("Heal");
@@ -49,7 +51,8 @@ public class WaveManager : MonoBehaviour
         foreach (var bullet in remainingBullets) Destroy(bullet);
         foreach (var heal in remainingHeals) Destroy(heal);
 
-        Time.timeScale = 0f;
+        TogglePlayerMovement(false);
+
         SceneManager.LoadScene(selectionMenuScene, LoadSceneMode.Additive);
         isMenuActive = true;
     }
@@ -59,7 +62,7 @@ public class WaveManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(selectionMenuScene);
         isMenuActive = false;
 
-        Time.timeScale = 1f;
+        TogglePlayerMovement(true);
 
         StartNextWave();
     }
@@ -85,7 +88,6 @@ public class WaveManager : MonoBehaviour
             Debug.Log($"Tiempo de la oleada {currentWave} agotado.");
             EndWave();
         }
-
     }
 
     private IEnumerator SpawnEnemies()
@@ -107,5 +109,30 @@ public class WaveManager : MonoBehaviour
         Vector2 spawnPosition = new Vector2(x, y);
 
         Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+    }
+
+    private void TogglePlayerMovement(bool enable)
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (GameObject player in players)
+        {
+
+            if (!enable)
+            {
+                var rigidbody2D = player.GetComponent<Rigidbody2D>();
+                if (rigidbody2D != null)
+                {
+                    rigidbody2D.linearVelocity = Vector2.zero;
+                    rigidbody2D.angularVelocity = 0f;
+                }
+            }
+
+            var movementScript = player.GetComponent<PlayerMovement>();
+            if (movementScript != null)
+            {
+                movementScript.enabled = enable;
+            }
+        }
     }
 }

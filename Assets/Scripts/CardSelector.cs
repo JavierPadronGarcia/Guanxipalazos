@@ -1,4 +1,3 @@
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +6,7 @@ public class CardSelector : MonoBehaviour
     public GameObject cardsGroupParent;
 
     private GameObject[] cards = new GameObject[3];
+    private bool[] isCardDisabled;
     private int currentIndex = 0;
     private float inputCooldown = 0.2f;
     private float lastInputTime = 0f;
@@ -14,27 +14,27 @@ public class CardSelector : MonoBehaviour
     [Header("Colores de Selección")]
     public Color selectedColor = Color.green;
     public Color defaultColor = Color.white;
+    public Color disabledColor = Color.gray;
 
     void Start()
     {
         if (cardsGroupParent != null)
         {
-            for (int i = 0; i < cardsGroupParent.transform.childCount; i++)
+            int childCount = cardsGroupParent.transform.childCount;
+            cards = new GameObject[childCount];
+            isCardDisabled = new bool[childCount];
+
+            for (int i = 0; i < childCount; i++)
             {
                 Transform child = cardsGroupParent.transform.GetChild(i);
                 cards[i] = child.gameObject;
-                Debug.Log("child encontrado");
+                isCardDisabled[i] = false;
             }
         }
-
 
         if (cards.Length > 0)
         {
             HighlightCard(currentIndex);
-        }
-        else
-        {
-            Debug.LogWarning("No se han asignado tarjetas en el inspector.");
         }
     }
 
@@ -47,12 +47,12 @@ public class CardSelector : MonoBehaviour
 
         if (horizontal > 0.5f)
         {
-            SelectCard(currentIndex + 1);
+            NavigateToCard(1);
             lastInputTime = Time.time;
         }
         else if (horizontal < -0.5f)
         {
-            SelectCard(currentIndex - 1);
+            NavigateToCard(-1);
             lastInputTime = Time.time;
         }
 
@@ -62,17 +62,31 @@ public class CardSelector : MonoBehaviour
         }
     }
 
-    private void SelectCard(int newIndex)
+    private void NavigateToCard(int direction)
     {
-        if (newIndex >= 0 && newIndex < cards.Length)
+        int newIndex = currentIndex;
+
+        do
         {
-            currentIndex = newIndex;
-            HighlightCard(currentIndex);
-        }
-        else
-        {
-            Debug.Log("Índice fuera de rango, no hay más tarjetas.");
-        }
+            newIndex += direction;
+
+            if (newIndex < 0)
+            {
+                newIndex = cards.Length - 1;
+            }
+            else if (newIndex >= cards.Length)
+            {
+                newIndex = 0;
+            }
+
+            if (!isCardDisabled[newIndex])
+            {
+                currentIndex = newIndex;
+                HighlightCard(currentIndex);
+                return;
+            }
+
+        } while (newIndex != currentIndex);
     }
 
     private void HighlightCard(int index)
@@ -82,18 +96,35 @@ public class CardSelector : MonoBehaviour
             var cardImage = cards[i].GetComponent<Image>();
             if (cardImage != null)
             {
-                cardImage.color = (i == index) ? selectedColor : defaultColor;
-            }
-            else
-            {
-                Debug.LogWarning($"La tarjeta {cards[i].name} no tiene un componente Image.");
+                if (isCardDisabled[i])
+                {
+                    cardImage.color = disabledColor;
+                }
+                else
+                {
+                    cardImage.color = (i == index) ? selectedColor : defaultColor;
+                }
             }
         }
     }
 
     private void UseCard()
     {
-        Debug.Log($"Usando la tarjeta: {cards[currentIndex].name}");
+        if (isCardDisabled[currentIndex])
+        {
+            return;
+        }
+        DisableCard(currentIndex);
+    }
+
+    private void DisableCard(int index)
+    {
+        isCardDisabled[index] = true;
+
+        var cardImage = cards[index].GetComponent<Image>();
+        if (cardImage != null)
+        {
+            cardImage.color = disabledColor;
+        }
     }
 }
-
