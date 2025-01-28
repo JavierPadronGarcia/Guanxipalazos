@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="boss" size="0.200000 0.259155" />
+    <ImageTarget name="soldier" size="0.200000 0.273864" />
+    <ImageTarget name="guanchita" size="0.200000 0.274178" />
     <ImageTarget name="ayose" size="0.200000 0.294950" />
   </Tracking>
 </QCARConfig>
