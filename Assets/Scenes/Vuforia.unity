@@ -923,9 +923,9 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: castellano
+  mTrackableName: soldier
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/GuanxiPalazos.xml
+  mDataSetPath: Vuforia/Guanxipalazos.xml
   mAspectRatio: 1.36932
   mImageTargetType: 0
   mWidth: 0.2
@@ -965,8 +965,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 470402077}
   mHiddenRoot: {fileID: 0}
-  mTargetName: castellano
-  mDatasetName: Vuforia/GuanxiPalazos.xml
+  mTargetName: soldier
+  mDatasetName: Vuforia/Guanxipalazos.xml
   mCastedBehaviour: {fileID: 470402077}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -1448,12 +1448,12 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: bossgame
+  mTrackableName: boss
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/GuanxiPalazos.xml
+  mDataSetPath: Vuforia/Guanxipalazos.xml
   mAspectRatio: 1.295775
   mImageTargetType: 0
-  mWidth: 0.19999999
+  mWidth: 0.2
   mHeight: 0.259155
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
@@ -1490,8 +1490,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1327915858}
   mHiddenRoot: {fileID: 0}
-  mTargetName: bossgame
-  mDatasetName: Vuforia/GuanxiPalazos.xml
+  mTargetName: boss
+  mDatasetName: Vuforia/Guanxipalazos.xml
   mCastedBehaviour: {fileID: 1327915858}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -2728,7 +2728,7 @@ MonoBehaviour:
   RuntimeCollider: 0
   mTrackableName: guanchita
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/GuanxiPalazos.xml
+  mDataSetPath: Vuforia/Guanxipalazos.xml
   mAspectRatio: 1.37089
   mImageTargetType: 0
   mWidth: 0.2
@@ -2769,7 +2769,7 @@ MonoBehaviour:
   mObserverBehaviour: {fileID: 1925783686}
   mHiddenRoot: {fileID: 0}
   mTargetName: guanchita
-  mDatasetName: Vuforia/GuanxiPalazos.xml
+  mDatasetName: Vuforia/Guanxipalazos.xml
   mCastedBehaviour: {fileID: 1925783686}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
