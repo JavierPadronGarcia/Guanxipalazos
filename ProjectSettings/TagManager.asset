@@ -11,6 +11,8 @@ TagManager:
   - Coin
   - Face
   - EndRoundCanvas
+  - HPBar1
+  - HPBar2
   layers:
   - Default
   - TransparentFX
