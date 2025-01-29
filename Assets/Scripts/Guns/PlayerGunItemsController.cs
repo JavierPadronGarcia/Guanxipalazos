@@ -21,21 +21,24 @@ public class PlayerGunItemsController : MonoBehaviour
     {
         foreach (GameObject gun in gunList)
         {
-            if (gun != null && !guns.ContainsKey(gun.name))
+            Gun gunScript = gun.GetComponent<Gun>();
+            if (gun != null && !guns.ContainsKey(gunScript.gunName))
             {
-                guns.Add(gun.name, gun);
+                guns.Add(gunScript.gunName, gun);
             }
         }
     }
 
     public void ActivateGun(string gunName)
     {
+        Debug.Log("Activando arma: " + guns.ContainsKey(gunName) + " " + !activeGuns.ContainsKey(gunName));
         if (guns.ContainsKey(gunName) && !activeGuns.ContainsKey(gunName))
         {
             guns.TryGetValue(gunName, out GameObject gun);
             if (gun != null)
             {
                 activeGuns.Add(gunName, gun);
+                gun.SetActive(true);
             }
         }
     }
