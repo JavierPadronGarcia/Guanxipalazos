@@ -18,6 +18,8 @@ public class WaveManager : MonoBehaviour
     private int enemiesSpawned;
     private bool waveActive;
     private PerlinSpawner perlinHealsSpawner;
+    private bool player1Turn = false;
+    private bool isMultiplayer = false;
 
     private void Awake()
     {
@@ -26,6 +28,8 @@ public class WaveManager : MonoBehaviour
 
     private void Start()
     {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        if (players.Length > 1) isMultiplayer = true;
         StartNextWave();
     }
 
@@ -67,10 +71,18 @@ public class WaveManager : MonoBehaviour
         StartNextWave();
     }
 
+    public bool GetPlayer1Turn()
+    {
+        return player1Turn;
+    }
+
     private void StartNextWave()
     {
         currentWave++;
         enemiesSpawned = 0;
+        if (isMultiplayer) player1Turn = !player1Turn;
+        else player1Turn = true;
+
         waveActive = true;
 
         Debug.Log($"Iniciando oleada {currentWave}");
