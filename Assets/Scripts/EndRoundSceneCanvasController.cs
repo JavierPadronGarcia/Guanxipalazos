@@ -1,14 +1,77 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EndRoundSceneCanvasController : MonoBehaviour
 {
     private WaveManager waveManager;
     private GameObject[] players;
+    public List<GameObject> possiblePlayerSelections;
+    public Transform parentSelectionGroup;
+
+    private int maxPossibleSelections = 3;
+    private List<GameObject> selectionsToRemove = new List<GameObject>();
 
     private void Awake()
     {
         waveManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<WaveManager>();
         players = GameObject.FindGameObjectsWithTag("Player");
+
+        GameObject player = players[GameManager.isPlayer1Turn ? 0 : 1];
+        PlayerGunItemsController playerGunItemsController = player.GetComponent<PlayerGunItemsController>();
+
+        var dictionary = playerGunItemsController.activeGuns;
+
+        foreach (var possibleSelection in possiblePlayerSelections)
+        {
+            SelectionCardController selectionCardController = possibleSelection.GetComponent<SelectionCardController>();
+            if (selectionCardController.isBaseGun && dictionary.ContainsKey(selectionCardController.gunName))
+            {
+                selectionsToRemove.Add(possibleSelection);
+            }
+        }
+
+        foreach (var selectionToRemove in selectionsToRemove)
+        {
+            possiblePlayerSelections.Remove(selectionToRemove);
+        }
+
+        selectionsToRemove.Clear();
+
+        foreach (var possibleSelection in possiblePlayerSelections)
+        {
+            SelectionCardController selectionCardController = possibleSelection.GetComponent<SelectionCardController>();
+        }
+    }
+
+    private void Start()
+    {
+        InstanceRandomPossiblePlayerSelectionPrefabs();
+    }
+
+    private void InstanceRandomPossiblePlayerSelectionPrefabs()
+    {
+        for (int i = 0; i < maxPossibleSelections; i++)
+        {
+            if (possiblePlayerSelections.Count > 1)
+            {
+                int randomValue = Random.Range(0, possiblePlayerSelections.Count);
+                GameObject selectedPrefab = possiblePlayerSelections[randomValue];
+                SelectionCardController selectionCardController = selectedPrefab.GetComponent<SelectionCardController>();
+                GameObject playerSelection = Instantiate(selectedPrefab);
+                playerSelection.transform.SetParent(parentSelectionGroup, false);
+
+                if (!selectionCardController.canAppearMultipleTimes)
+                {
+                    possiblePlayerSelections.RemoveAt(randomValue);
+                }
+            }
+            else
+            {
+                GameObject playerSelection = Instantiate(possiblePlayerSelections[0]);
+                playerSelection.transform.SetParent(parentSelectionGroup, false);
+                possiblePlayerSelections.Remove(playerSelection);
+            }
+        }
     }
 
     public void ContinueNextRound()

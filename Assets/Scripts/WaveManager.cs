@@ -28,6 +28,12 @@ public class WaveManager : MonoBehaviour
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         if (players.Length > 1) GameManager.isMultiplayer = true;
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            players[i].GetComponent<PlayerGunItemsController>().ActivateGun("magado");
+        }
+
         StartNextWave();
     }
 

@@ -632,7 +632,7 @@ MonoBehaviour:
   isHeal: 0
   isBaseGun: 1
   gunName: lanzapiedras
-  money: 80
+  money: 1
   moneyText: {fileID: 104220487953193571}
   healQuantity: 50
 --- !u!114 &2731883442068247301
