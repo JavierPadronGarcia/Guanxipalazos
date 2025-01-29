@@ -764,8 +764,9 @@ MonoBehaviour:
     gunDamageIncrease: 0
   isHeal: 1
   isBaseGun: 0
+  canAppearMultipleTimes: 1
   gunName: 
-  money: 50
+  money: 1
   moneyText: {fileID: 5515974657389870757}
   healQuantity: 50
 --- !u!114 &291933516539853206

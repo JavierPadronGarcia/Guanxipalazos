@@ -5,7 +5,7 @@ public class SelectionCardController : MonoBehaviour
 {
     public ArmaMejoras gunAttributes;
 
-    public bool isHeal, isBaseGun;
+    public bool isHeal, isBaseGun, canAppearMultipleTimes;
     public string gunName;
 
     public int money;
