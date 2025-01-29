@@ -18,7 +18,7 @@ public class EndRoundSceneCanvasController : MonoBehaviour
 
     public void HealPlayer(int healQuantity, int money)
     {
-        if (waveManager.GetPlayer1Turn())
+        if (GameManager.isPlayer1Turn)
         {
             players[0].GetComponent<PlayerHealth>().RestoreHealth(healQuantity);
         }
@@ -31,7 +31,7 @@ public class EndRoundSceneCanvasController : MonoBehaviour
 
     public void BuyGun(string gunName, int money)
     {
-        if (waveManager.GetPlayer1Turn())
+        if (GameManager.isPlayer1Turn)
         {
             players[0].GetComponent<PlayerGunItemsController>().ActivateGun(gunName);
         }
@@ -44,7 +44,7 @@ public class EndRoundSceneCanvasController : MonoBehaviour
 
     public void ImproveGun(ArmaMejoras gunImproves, string gunName, int money)
     {
-        if (waveManager.GetPlayer1Turn())
+        if (GameManager.isPlayer1Turn)
         {
             players[0].GetComponent<PlayerGunItemsController>().UpgradeGun(gunName, gunImproves);
         }
