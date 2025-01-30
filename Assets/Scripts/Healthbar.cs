@@ -1,16 +1,17 @@
+using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI; // For managing UI elements
+using UnityEngine.UI;
 
 public class HPBar : MonoBehaviour
 {
     public int maxHP = 100;
     public PlayerHealth healthScript;
     public int currentHP;
-    public float damageInterval = 5f; // Time in seconds between damage instances
+    public float damageInterval = 5f;
     public int damageAmount = 10;
 
-    public Image hpBarForeground; // The main HP bar image (must have Fill type set to Horizontal)
+    public Image hpBarForeground;
 
     private void Start()
     {

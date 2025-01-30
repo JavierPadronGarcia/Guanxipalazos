@@ -6,7 +6,7 @@ public class PlayerSpawner : MonoBehaviour
     public GameObject jugador2Prefab;
     public Transform spawnPoint; // Punto donde aparecerá el personaje
 
-    void Start()
+    void Awake()
     {
         int personajeSeleccionado = PlayerPrefs.GetInt("PersonajeSeleccionado", 1);
 

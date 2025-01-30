@@ -13,6 +13,7 @@ TagManager:
   - EndRoundCanvas
   - HPBar1
   - HPBar2
+  - PlayerCollider
   layers:
   - Default
   - TransparentFX

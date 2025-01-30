@@ -1,32 +1,38 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    public float velocidadMovimiento = 5f;
+    [SerializeField] private float playerSpeed = 5.0f;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D rb2D;
     private SpriteRenderer playerRenderer;
     private Animator anim;
 
+    private Vector2 movementInput = Vector2.zero;
+
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb2D = GetComponent<Rigidbody2D>();
         playerRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    public void OnMove(InputAction.CallbackContext context)
     {
-        float movimientoX = Input.GetAxis("Horizontal");
-        float movimientoY = Input.GetAxis("Vertical");
+        movementInput = context.ReadValue<Vector2>();
+    }
 
-        if (movimientoX < 0) playerRenderer.flipX = true;
-        else if (movimientoX > 0) playerRenderer.flipX = false;
+    private void FixedUpdate()
+    {
+        Vector2 move = movementInput * playerSpeed * Time.fixedDeltaTime;
+        rb2D.MovePosition(rb2D.position + move);
 
-        Vector2 vectorVelocidad = new Vector2(movimientoX * velocidadMovimiento, movimientoY * velocidadMovimiento);
-        rb.linearVelocity = vectorVelocidad;
+        if (move.x < 0) playerRenderer.flipX = true;
+        else if (move.x > 0) playerRenderer.flipX = false;
 
-        if (rb.linearVelocity.sqrMagnitude > 0) SetAnimation("running");
+        if (move != Vector2.zero) SetAnimation("running");
         else SetAnimation("idle");
     }
 

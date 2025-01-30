@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        boxCollider2D =GetComponent<BoxCollider2D>();
         maxHealth = health;
         PF = GameObject.FindGameObjectWithTag("Face").GetComponent<Image>();
     }
@@ -29,8 +29,9 @@ public class PlayerHealth : MonoBehaviour
         if (health > 70)
         {
             PF.sprite = Face1;
-        } else if (health <70 && health > 30)
-        { 
+        }
+        else if (health < 70 && health > 30)
+        {
             PF.sprite = Face2;
         }
         else if (health < 30)
