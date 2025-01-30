@@ -6,21 +6,21 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 100f;
     public float health = 100f;
 
-    private Image PF;
+    public Image PF;
     public Sprite Face1, Face2, Face3;
+    public bool healthActive = false;
 
     private BoxCollider2D boxCollider2D;
 
     private void Start()
     {
-        boxCollider2D =GetComponent<BoxCollider2D>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
         maxHealth = health;
-        PF = GameObject.FindGameObjectWithTag("Face").GetComponent<Image>();
     }
 
     private void Update()
     {
-        CheckHealthAndChangeImage();
+        if (healthActive == true) CheckHealthAndChangeImage();
     }
 
 
