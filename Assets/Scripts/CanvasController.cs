@@ -5,7 +5,7 @@ public class CanvasController : MonoBehaviour
     
     public void StartGame()
     {
-        SCManager.instance.LoadScene("Level1");
+        SCManager.instance.LoadScene("SelectPlayer");
     }
 
     public void NavigateLibrary()

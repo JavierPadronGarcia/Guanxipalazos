@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ButtonSwitch : MonoBehaviour
 {
-    public GameObject Allies, Enemies, QR, Return;
+    public GameObject Allies, Enemies, QR, Return, Buttons;
 
     public void Switch()
     {
@@ -24,6 +24,7 @@ public class ButtonSwitch : MonoBehaviour
         {
             Allies.SetActive(false);
             Enemies.SetActive(false);
+            Buttons.SetActive(false);
             QR.SetActive(true);
             Return.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "VOLVER";
         }
@@ -31,6 +32,7 @@ public class ButtonSwitch : MonoBehaviour
         {
             Allies.SetActive(true);
             Enemies.SetActive(false);
+            Buttons.SetActive(true);
             QR.SetActive(false);
             Return.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "VER EN AR";
         }
