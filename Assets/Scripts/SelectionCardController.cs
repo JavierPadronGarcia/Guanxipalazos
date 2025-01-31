@@ -23,18 +23,21 @@ public class SelectionCardController : MonoBehaviour
 
     public void ItemSelected()
     {
-        if (isHeal)
+        if (GameManager.Coins - money >= 0)
         {
-            endRounCanvas.HealPlayer(healQuantity, money);
-            return;
-        }
+            if (isHeal)
+            {
+                endRounCanvas.HealPlayer(healQuantity, money);
+                return;
+            }
 
-        if (isBaseGun)
-        {
-            endRounCanvas.BuyGun(gunName, money);
-            return;
-        }
+            if (isBaseGun)
+            {
+                endRounCanvas.BuyGun(gunName, money);
+                return;
+            }
 
-        endRounCanvas.ImproveGun(gunAttributes, gunName, money);
+            endRounCanvas.ImproveGun(gunAttributes, gunName, money);
+        }
     }
 }
