@@ -18,23 +18,23 @@ public class ButtonSwitch : MonoBehaviour
             Enemies.SetActive(false);
         }
     }
-    public void QRSwitch()
-    {
-        if (!QR.activeSelf)
-        {
-            Allies.SetActive(false);
-            Enemies.SetActive(false);
-            Buttons.SetActive(false);
-            QR.SetActive(true);
-            Return.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "VOLVER";
-        }
-        else
-        {
-            Allies.SetActive(true);
-            Enemies.SetActive(false);
-            Buttons.SetActive(true);
-            QR.SetActive(false);
-            Return.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "VER EN AR";
-        }
-    }
+    //public void QRSwitch()
+    //{
+    //    if (!QR.activeSelf)
+    //    {
+    //        Allies.SetActive(false);
+    //        Enemies.SetActive(false);
+    //        Buttons.SetActive(false);
+    //        QR.SetActive(true);
+    //        Return.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "VOLVER";
+    //    }
+    //    else
+    //    {
+    //        Allies.SetActive(true);
+    //        Enemies.SetActive(false);
+    //        Buttons.SetActive(true);
+    //        QR.SetActive(false);
+    //        Return.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "VER EN AR";
+    //    }
+    //}
 }
