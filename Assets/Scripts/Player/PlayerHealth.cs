@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -67,7 +68,24 @@ public class PlayerHealth : MonoBehaviour
     public void PlayerDead()
     {
         Debug.Log("Jugador Muerto");
+        SCManager.instance.LoadScene("DeathScreen"); 
         Destroy(gameObject);
+    }
+    //public void Respawn()
+    //{
+    //    Time.timeScale = 1; // Resume game
+    //    StartCoroutine(UnloadDeathScreen());
+    //    health = maxHealth;
+    //}
+    private System.Collections.IEnumerator UnloadDeathScreen()
+    {
+        yield return SceneManager.UnloadSceneAsync("DeathScreen");
+        Debug.Log("Death Screen Unloaded. Player Respawned.");
+    }
+
+    public void goBack()
+    {
+        SCManager.instance.LoadScene("MainMenu");
     }
 
     public void RestoreHealth(float heal = 0)
