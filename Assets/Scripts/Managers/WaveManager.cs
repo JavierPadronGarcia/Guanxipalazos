@@ -12,8 +12,6 @@ public class WaveManager : MonoBehaviour
     public float spawnInterval = 2f;
     public float waveDuration = 30f;
     public int enemiesIncrementPerWave = 2;
-
-    private bool isMenuActive = false;
     private int currentWave = 0;
     private int enemiesSpawned;
     private bool waveActive;
@@ -37,14 +35,6 @@ public class WaveManager : MonoBehaviour
         StartNextWave();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.M) && !isMenuActive)
-        {
-            EndWave();
-        }
-    }
-
     public void EndWave()
     {
         waveActive = false;
@@ -61,14 +51,12 @@ public class WaveManager : MonoBehaviour
 
         TogglePlayerMovement(false);
 
-        SceneManager.LoadScene(selectionMenuScene, LoadSceneMode.Additive);
-        isMenuActive = true;
+        SCManager.instance.LoadSceneAdd(selectionMenuScene);
     }
 
     public void ContinueGame()
     {
-        SceneManager.UnloadSceneAsync(selectionMenuScene);
-        isMenuActive = false;
+        SCManager.instance.UnloadScene(selectionMenuScene);
 
         TogglePlayerMovement(true);
 

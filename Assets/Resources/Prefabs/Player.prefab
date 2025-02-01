@@ -15,11 +15,12 @@ GameObject:
   - component: {fileID: 1657143593877065828}
   - component: {fileID: 8290657024305411656}
   - component: {fileID: 5207124938057655549}
+  - component: {fileID: 1965570814449561964}
   - component: {fileID: 8922804434875520320}
   - component: {fileID: 694602904214108368}
   - component: {fileID: 1044161026317572772}
   m_Layer: 6
-  m_Name: Player_ayose
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,10 +147,13 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   PF: {fileID: 0}
-  Face1: {fileID: 21300000, guid: 5fd6850eb3fd3b04b92ae7409761f93b, type: 3}
-  Face2: {fileID: 21300000, guid: 809d340ff91998b4c8f4e8e2b144d0c6, type: 3}
-  Face3: {fileID: 21300000, guid: adf96677d0cce034f9320bdddac717d0, type: 3}
   healthActive: 0
+  AFace1: {fileID: 21300000, guid: 5fd6850eb3fd3b04b92ae7409761f93b, type: 3}
+  AFace2: {fileID: 21300000, guid: 809d340ff91998b4c8f4e8e2b144d0c6, type: 3}
+  AFace3: {fileID: 21300000, guid: adf96677d0cce034f9320bdddac717d0, type: 3}
+  GFace1: {fileID: 21300000, guid: 952abdc141156d145829c2fa9af18ccc, type: 3}
+  GFace2: {fileID: 21300000, guid: fd75a3befe6d0da40aea7d15f86a8d33, type: 3}
+  GFace3: {fileID: 21300000, guid: 93e51deb359342c49a2d6395afa0df2d, type: 3}
 --- !u!114 &8290657024305411656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +183,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a895eeebf1460043b178370ba0c2504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1965570814449561964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5193832876190560111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855a5eb64bde3f3459aa7a9622692b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AyoseSprite: {fileID: -1338472103, guid: b82bbd03a2fdd614a9cd8a648ad3fc3c, type: 3}
+  AyoseAnimatorController: {fileID: 9100000, guid: 14c13f728bc12084a82f19dc4543df58, type: 2}
+  GuanchitaSprite: {fileID: 1489937249, guid: 98f3f389b7066e64e92c245b22aaa52d, type: 3}
+  GuanchitaAnimatorController: {fileID: 9100000, guid: c2917e5748a6b594eb1aab6c2ce7af07, type: 2}
 --- !u!114 &8922804434875520320
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,15 +7,28 @@ public class PlayerHealth : MonoBehaviour
     public float health = 100f;
 
     public Image PF;
-    public Sprite Face1, Face2, Face3;
+
     public bool healthActive = false;
 
+    [Header("Caras Ayose")]
+    public Sprite AFace1;
+    public Sprite AFace2;
+    public Sprite AFace3;
+
+    [Header("Caras Guanchita")]
+    public Sprite GFace1;
+    public Sprite GFace2;
+    public Sprite GFace3;
+
     private BoxCollider2D boxCollider2D;
+
+    private int playerNumber;
 
     private void Start()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
         maxHealth = health;
+        playerNumber = GameManager.playerCount;
     }
 
     private void Update()
@@ -28,15 +41,15 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health > 70)
         {
-            PF.sprite = Face1;
+            PF.sprite = playerNumber == 1 ? AFace1 : GFace1;
         }
         else if (health < 70 && health > 30)
         {
-            PF.sprite = Face2;
+            PF.sprite = playerNumber == 1 ? AFace2 : GFace2;
         }
         else if (health < 30)
         {
-            PF.sprite = Face3;
+            PF.sprite = playerNumber == 1 ? AFace3 : GFace3;
         }
 
     }
