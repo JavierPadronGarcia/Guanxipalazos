@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class EndRoundSceneCanvasController : MonoBehaviour
 {
@@ -7,12 +8,14 @@ public class EndRoundSceneCanvasController : MonoBehaviour
     private GameObject[] players;
     public List<GameObject> possiblePlayerSelections;
     public Transform parentSelectionGroup;
+    public GameObject continueButton;
 
     private int maxPossibleSelections = 3;
     private List<GameObject> selectionsToRemove = new List<GameObject>();
 
     private void Awake()
     {
+        EventSystem.current.SetSelectedGameObject(continueButton);
         waveManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<WaveManager>();
         players = GameObject.FindGameObjectsWithTag("Player");
 

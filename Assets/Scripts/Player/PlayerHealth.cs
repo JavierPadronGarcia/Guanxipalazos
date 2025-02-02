@@ -61,26 +61,8 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            PlayerDead();
+            Destroy(this.gameObject);
         }
-    }
-
-    public void PlayerDead()
-    {
-        Debug.Log("Jugador Muerto");
-        SCManager.instance.LoadScene("DeathScreen"); 
-        Destroy(gameObject);
-    }
-    //public void Respawn()
-    //{
-    //    Time.timeScale = 1; // Resume game
-    //    StartCoroutine(UnloadDeathScreen());
-    //    health = maxHealth;
-    //}
-    private System.Collections.IEnumerator UnloadDeathScreen()
-    {
-        yield return SceneManager.UnloadSceneAsync("DeathScreen");
-        Debug.Log("Death Screen Unloaded. Player Respawned.");
     }
 
     public void goBack()

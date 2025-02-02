@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class WaveManager : MonoBehaviour
@@ -57,6 +58,7 @@ public class WaveManager : MonoBehaviour
     public void ContinueGame()
     {
         SCManager.instance.UnloadScene(selectionMenuScene);
+        EventSystem.current.SetSelectedGameObject(null);
 
         TogglePlayerMovement(true);
 

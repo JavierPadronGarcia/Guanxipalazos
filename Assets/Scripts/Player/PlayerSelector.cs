@@ -4,20 +4,28 @@ using UnityEngine.UI;
 
 public class PlayerSelection : MonoBehaviour
 {
+    [Header("Players")]
     [SerializeField] GameObject player1Text;
     [SerializeField] GameObject player2Text;
     [SerializeField] GameObject player1Healthbar;
     [SerializeField] GameObject player2Healthbar;
+
+    [Header("Others")]
     [SerializeField] GameObject RoundManager;
     [SerializeField] GameObject CoinGroup;
 
-    private bool gameStarted = false;
-
     private void Update()
     {
-        if (!gameStarted && GameManager.playerCount > 0 && (Keyboard.current.enterKey.wasPressedThisFrame || Gamepad.all.Count > 0 && Gamepad.all[0].startButton.wasPressedThisFrame))
+        bool enterAndStartButtons = GameManager.playerCount > 0 && (Keyboard.current.enterKey.wasPressedThisFrame || Gamepad.all.Count > 0 && Gamepad.all[0].startButton.wasPressedThisFrame);
+        bool escapeAndStartButtons = GameManager.playerCount > 0 && (Keyboard.current.escapeKey.wasPressedThisFrame || Gamepad.all.Count > 0 && Gamepad.all[0].startButton.wasPressedThisFrame);
+
+        if (!GameManager.gameStarted && enterAndStartButtons)
         {
             StartGame();
+        }
+        else if (GameManager.gameStarted && !GameManager.gamePaused && escapeAndStartButtons)
+        {
+            PauseGame();
         }
     }
 
@@ -45,6 +53,17 @@ public class PlayerSelection : MonoBehaviour
         }
 
     }
+
+    public void PlayerDespawned()
+    {
+        GameManager.playerCount--;
+        if (GameManager.gameStarted && GameManager.playerCount <= 0)
+        {
+            Debug.Log("Has perdido");
+        }
+    }
+
+
     GameObject FindChildWithTag(Transform parent, string tag)
     {
         foreach (Transform child in parent)
@@ -59,9 +78,15 @@ public class PlayerSelection : MonoBehaviour
 
     private void StartGame()
     {
-        gameStarted = true;
+        GameManager.gameStarted = true;
         RoundManager.SetActive(true);
         CoinGroup.SetActive(true);
+
+        PlayerInputManager.instance.DisableJoining();
     }
 
+    public void PauseGame()
+    {
+        SCManager.instance.LoadSceneAdd("PauseMenu");
+    }
 }

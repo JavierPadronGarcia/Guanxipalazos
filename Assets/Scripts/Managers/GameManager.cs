@@ -7,8 +7,6 @@ public class GameManager : MonoBehaviour
     public static bool isMultiplayer = false;
     public static int selectedPlayer;
     public static int playerCount = 0;
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+    public static bool gamePaused = false;
+    public static bool gameStarted = false;
 }
