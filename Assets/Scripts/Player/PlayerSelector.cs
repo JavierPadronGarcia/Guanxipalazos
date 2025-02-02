@@ -7,6 +7,7 @@ public class PlayerSelection : MonoBehaviour
     [Header("Players")]
     [SerializeField] GameObject player1Text;
     [SerializeField] GameObject player2Text;
+    [SerializeField] GameObject playerTipText;
     [SerializeField] GameObject player1Healthbar;
     [SerializeField] GameObject player2Healthbar;
 
@@ -36,6 +37,7 @@ public class PlayerSelection : MonoBehaviour
 
         if (GameManager.playerCount == 1)
         {
+            playerTipText.SetActive(true);
             player1Text.SetActive(false);
             PlayerHealth player1H = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<PlayerHealth>();
             player1Healthbar.SetActive(true);
@@ -79,6 +81,7 @@ public class PlayerSelection : MonoBehaviour
 
     private void StartGame()
     {
+        playerTipText.SetActive(false);
         GameManager.gameStarted = true;
         RoundManager.SetActive(true);
         CoinGroup.SetActive(true);

@@ -90,8 +90,10 @@ public class Gun : MonoBehaviour
         switch (gunType)
         {
             case GunType.Lanza:
+                AudioManager.instance.PlaySFX("LanceThrow");
                 break;
             case GunType.Lanzapiedras:
+                AudioManager.instance.PlaySFX("RockThrow");
                 break;
             case GunType.Tabona:
                 AudioManager.instance.PlaySFX("Knife");

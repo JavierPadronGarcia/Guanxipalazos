@@ -65,6 +65,8 @@ public class AudioManager : MonoBehaviour
         sfxClips["Drink"] = Resources.Load<AudioClip>("SFX/Drinks/Open_Can");
         sfxClips["Knife"] = Resources.Load<AudioClip>("SFX/Stab/Knife_Stab");
         sfxClips["EnemyStab"] = Resources.Load<AudioClip>("SFX/Stab/Axe_Hit");
+        sfxClips["LanceThrow"] = Resources.Load<AudioClip>("SFX/Throw/Throw_Lance");
+        sfxClips["RockThrow"] = Resources.Load<AudioClip>("SFX/Throw/Rock_Throw");
     }
 
     // Método privado para cargar la música de fondo directamente desde las carpetas
@@ -79,6 +81,7 @@ public class AudioManager : MonoBehaviour
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        StopSFX();  // Parar todos los SFX, evitar Loops
         PlayMusicForScene(scene.name);
     }
 
