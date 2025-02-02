@@ -41,7 +41,7 @@ public class WaveManager : MonoBehaviour
 
     public void EndWave()
     {
-        AudioManager.instance.StopSFX();
+        AudioManager.instance.StopAllSFX();
         waveActive = false;
         StopAllCoroutines();
         perlinHealsSpawner.StopCoroutines();

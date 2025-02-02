@@ -8,9 +8,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float playerSpeed = 5.0f;
     [SerializeField] private ParticleSystem runParticles;
 
+
     private Rigidbody2D rb2D;
     private SpriteRenderer playerRenderer;
     private Animator anim;
+    private bool isRunningSoundPlaying = false;
+    private int playerId = 0;
 
     private Vector2 movementInput = Vector2.zero;
 
@@ -19,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         playerRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        playerId = GameManager.playerCount;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -37,13 +41,22 @@ public class PlayerMovement : MonoBehaviour
         if (move != Vector2.zero)
         {
             SetAnimation("running");
-            AudioManager.instance.StopSFX("Run");
+
+            if (!isRunningSoundPlaying)
+            {
+                AudioManager.instance.PlayRunSFX(playerId);
+                isRunningSoundPlaying = true;
+            }
+
             if (!runParticles.isPlaying) runParticles.Play();
         }
         else
         {
             SetAnimation("idle");
-            AudioManager.instance.PlaySFXLoop("Run", true);
+
+            AudioManager.instance.StopRunSFX(playerId);
+            isRunningSoundPlaying = false;
+
             if (runParticles.isPlaying) runParticles.Stop();
         }
     }
