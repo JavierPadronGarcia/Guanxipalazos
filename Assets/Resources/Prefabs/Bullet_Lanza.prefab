@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1783489425944836668, guid: f2c254d49807eb548ab7932fe1a122d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.59
+      objectReference: {fileID: 0}
     - target: {fileID: 2406790154671790485, guid: f2c254d49807eb548ab7932fe1a122d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -71,6 +75,26 @@ PrefabInstance:
     - target: {fileID: 5309760981313864449, guid: f2c254d49807eb548ab7932fe1a122d7, type: 3}
       propertyPath: m_Name
       value: Bullet_Lanza
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731495426348543075, guid: f2c254d49807eb548ab7932fe1a122d7, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.0764431
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731495426348543075, guid: f2c254d49807eb548ab7932fe1a122d7, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731495426348543075, guid: f2c254d49807eb548ab7932fe1a122d7, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.23137257
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731495426348543075, guid: f2c254d49807eb548ab7932fe1a122d7, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.37254903
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731495426348543075, guid: f2c254d49807eb548ab7932fe1a122d7, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.44705886
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6951107830603293716, guid: f2c254d49807eb548ab7932fe1a122d7, type: 3}
