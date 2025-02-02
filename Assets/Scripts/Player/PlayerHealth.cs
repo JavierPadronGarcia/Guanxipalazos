@@ -79,6 +79,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.PlaySFX("Drink");
             health += heal;
         }
     }

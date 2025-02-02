@@ -15,6 +15,7 @@ public class PlayerCoinManager : MonoBehaviour
         {
             GameManager.Coins++;
             Debug.Log("Moneda recogida, total: " + GameManager.Coins);
+            AudioManager.instance.PlaySFX("GrabItem");
             Destroy(collision.gameObject);
         }
     }
