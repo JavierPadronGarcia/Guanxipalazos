@@ -378,8 +378,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Final de Ronda
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -768,8 +768,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continuar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

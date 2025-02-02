@@ -178,7 +178,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: CERRAR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &32007923
@@ -314,8 +314,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ayose
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -450,7 +450,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Soldado Castellano
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -225.8159, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &67524220
@@ -586,8 +586,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Lanzapiedras
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -959,8 +959,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "ABOR\xCDGENES"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1095,7 +1095,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xA1No hay webcams conectadas!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1161,7 +1161,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -159.92049, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &322231364
@@ -1231,7 +1231,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Jefe Castellano
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1297,7 +1297,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -0.10256195, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &333431148
@@ -1726,8 +1726,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: VER EN AR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1937,8 +1937,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Guanchita
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2078,7 +2078,7 @@ MonoBehaviour:
     a decepcionar a sus l\xEDderes ni a permitir que la resistencia de los abor\xEDgenes
     interfiriera en su misi\xF3n.  "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2144,7 +2144,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -0.8792114, w: -251.86472}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &813285870
@@ -2214,8 +2214,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tabona
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2350,8 +2350,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "VOLVER ATR\xC1S"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2486,7 +2486,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: CASTELLANOS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2552,7 +2552,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -126.930214, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1100986516
@@ -2626,8 +2626,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Armamento
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2837,8 +2837,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "CAMBIAR INFORMACI\xD3N"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3012,7 +3012,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3078,7 +3078,7 @@ MonoBehaviour:
   m_margin: {x: -23.245972, y: 0, z: -17.157398, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1277031185
@@ -3607,8 +3607,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Magado
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3745,7 +3745,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Armamento
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3811,7 +3811,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -126.930214, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1502389668
@@ -3934,50 +3934,6 @@ RectTransform:
   m_AnchoredPosition: {x: -2.4146423, y: 3.0906982}
   m_SizeDelta: {x: 1872.8293, y: 1006.1814}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1583740761
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1583740763}
-  - component: {fileID: 1583740762}
-  m_Layer: 0
-  m_Name: SceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1583740762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583740761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e98f6f1142ed6164a9b6c16a3558bad3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1583740763
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583740761}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1628425242
 GameObject:
   m_ObjectHideFlags: 0
@@ -4076,8 +4032,8 @@ MonoBehaviour:
     \xE9l, se embarca en un viaje y lucha por defender su tierra de origen de los
     invasores castellanos."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4329,7 +4285,7 @@ MonoBehaviour:
     y su esp\xEDritu indomable, estaban dispuestos a defender su hogar a toda costa
     ante estos invasores. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4395,7 +4351,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -0.49664307, w: -292.09308}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1765742273
@@ -4864,8 +4820,8 @@ MonoBehaviour:
     amenazan a su tierra de origen, quiere probarse ante su tribu para redimirse
     y recuperar su respeto."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5000,8 +4956,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Lanza
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
-  m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
+  m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5252,7 +5208,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Alabarda
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_sharedMaterial: {fileID: 3563925057397372415, guid: 0a157d3f17677c942b1e5b2f1922be2d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5318,7 +5274,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -1.8515663, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2020086976
@@ -5682,4 +5638,3 @@ SceneRoots:
   - {fileID: 237403440}
   - {fileID: 1386791364}
   - {fileID: 142284693}
-  - {fileID: 1583740763}
