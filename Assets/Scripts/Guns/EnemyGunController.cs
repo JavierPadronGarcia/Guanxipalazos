@@ -86,6 +86,7 @@ public class EnemyGunController : MonoBehaviour
 
         if (!isMelee && projectile != null && muzzlePosition != null)
         {
+            AudioManager.instance.PlaySFX("Shoot");
             if (!shootParticles.isPlaying) shootParticles.Play();
             var muzzleGo = Instantiate(muzzle, muzzlePosition.position, transform.rotation);
             muzzleGo.transform.SetParent(transform);

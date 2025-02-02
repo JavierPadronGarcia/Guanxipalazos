@@ -37,11 +37,13 @@ public class PlayerMovement : MonoBehaviour
         if (move != Vector2.zero)
         {
             SetAnimation("running");
+            AudioManager.instance.StopSFX("Run");
             if (!runParticles.isPlaying) runParticles.Play();
         }
         else
         {
             SetAnimation("idle");
+            AudioManager.instance.PlaySFXLoop("Run", true);
             if (runParticles.isPlaying) runParticles.Stop();
         }
     }
