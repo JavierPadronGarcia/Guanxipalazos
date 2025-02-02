@@ -92,7 +92,11 @@ public class EnemyGunController : MonoBehaviour
             Destroy(muzzleGo, 0.2f);
 
             Vector2 direction = (closestPlayer.position - muzzlePosition.position).normalized;
-            var projectileGo = Instantiate(projectile, muzzlePosition.position, Quaternion.identity);
+
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.Euler(0, 0, angle);
+
+            var projectileGo = Instantiate(projectile, muzzlePosition.position, rotation);
 
             BulletController bulletController = projectileGo.GetComponent<BulletController>();
             bulletController.bulletDamage = gunDamage;
@@ -113,7 +117,6 @@ public class EnemyGunController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(meleeRaycastOrigin.position, transform.right, raycastLength, playerLayerMask);
             if (hit.collider != null && hit.collider.CompareTag("Player"))
             {
-                Debug.Log("ColisionConJugador");
                 PlayerHealth playerHealth = hit.collider.GetComponent<PlayerHealth>();
                 if (playerHealth != null)
                 {
