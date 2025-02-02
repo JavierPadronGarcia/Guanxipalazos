@@ -13,6 +13,7 @@ public class PlayerSelection : MonoBehaviour
     [Header("Others")]
     [SerializeField] GameObject RoundManager;
     [SerializeField] GameObject CoinGroup;
+    [SerializeField] GameObject RoundHelpers;
 
     private void Update()
     {
@@ -81,6 +82,7 @@ public class PlayerSelection : MonoBehaviour
         GameManager.gameStarted = true;
         RoundManager.SetActive(true);
         CoinGroup.SetActive(true);
+        RoundHelpers.SetActive(true);
 
         PlayerInputManager.instance.DisableJoining();
     }

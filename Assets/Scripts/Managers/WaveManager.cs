@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -6,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class WaveManager : MonoBehaviour
 {
     public string selectionMenuScene = "SelectionMenu";
+    public TextMeshProUGUI waveTimerText;
+    public TextMeshProUGUI roundCountText;
 
     public GameObject enemyPrefab;
     public Vector2 spawnArea = new Vector2(10f, 10f);
@@ -68,6 +71,7 @@ public class WaveManager : MonoBehaviour
     private void StartNextWave()
     {
         currentWave++;
+        roundCountText.text = "Oleada " + currentWave.ToString();
         enemiesSpawned = 0;
         if (GameManager.isMultiplayer) GameManager.isPlayer1Turn = !GameManager.isPlayer1Turn;
         else GameManager.isPlayer1Turn = true;
@@ -82,7 +86,29 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator WaveTimer()
     {
-        yield return new WaitForSeconds(waveDuration);
+        float remainingTime = waveDuration;
+        int enemiesPerWave = initialEnemiesPerWave + (currentWave - 1) * enemiesIncrementPerWave;
+
+        while (remainingTime > 0 && waveActive)
+        {
+            if (waveTimerText != null)
+            {
+                waveTimerText.text = $"Tiempo: {Mathf.CeilToInt(remainingTime)}s";
+            }
+
+            yield return new WaitForSeconds(1f);
+            remainingTime--;
+
+            if (enemiesSpawned >= enemiesPerWave && GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+            {
+                remainingTime = Mathf.Min(remainingTime, 5f);
+            }
+        }
+
+        if (waveTimerText != null)
+        {
+            waveTimerText.text = "¡Oleada terminada!";
+        }
 
         if (waveActive)
         {
@@ -90,6 +116,8 @@ public class WaveManager : MonoBehaviour
             EndWave();
         }
     }
+
+
 
     private IEnumerator SpawnEnemies()
     {

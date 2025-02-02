@@ -238,7 +238,6 @@ MonoBehaviour:
   - {fileID: 8217725213549271546, guid: 943b2baa1645f1f4a84c742d5cfd30de, type: 3}
   - {fileID: 8217725213549271546, guid: 40b0acf652a895e4a9c513c5ec3927ad, type: 3}
   - {fileID: 8217725213549271546, guid: d303f48fc9b216e4a9925297cf8937b2, type: 3}
-  - {fileID: 8217725213549271546, guid: 2943c4468a7320342ac8ba8aba903054, type: 3}
   - {fileID: 8217725213549271546, guid: 28593c233a926134e9b3eb315cecbb14, type: 3}
   parentSelectionGroup: {fileID: 1903408814}
   continueButton: {fileID: 989085991}
