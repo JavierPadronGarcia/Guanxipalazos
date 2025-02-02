@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float playerSpeed = 5.0f;
+    [SerializeField] private ParticleSystem runParticles;
 
     private Rigidbody2D rb2D;
     private SpriteRenderer playerRenderer;
@@ -32,8 +34,16 @@ public class PlayerMovement : MonoBehaviour
         if (move.x < 0) playerRenderer.flipX = true;
         else if (move.x > 0) playerRenderer.flipX = false;
 
-        if (move != Vector2.zero) SetAnimation("running");
-        else SetAnimation("idle");
+        if (move != Vector2.zero)
+        {
+            SetAnimation("running");
+            if (!runParticles.isPlaying) runParticles.Play();
+        }
+        else
+        {
+            SetAnimation("idle");
+            if (runParticles.isPlaying) runParticles.Stop();
+        }
     }
 
     private void SetAnimation(string name)
