@@ -7,10 +7,14 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform muzzlePosition;
     [SerializeField] GameObject projectile;
 
+    private enum GunType { Lanza, Lanzapiedras, Magado, Tabona }
+    [SerializeField] GunType gunType;
+
     public string gunName;
     public float fireDistance = 10;
     public float fireRate = 0.5f;
     public int gunDamage = 10;
+
 
     [SerializeField] Animator childAnimator;
 
@@ -83,6 +87,18 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         childAnimator.SetTrigger("Shoot");
+        switch (gunType)
+        {
+            case GunType.Lanza:
+                break;
+            case GunType.Lanzapiedras:
+                break;
+            case GunType.Tabona:
+                AudioManager.instance.PlaySFX("Knife");
+                break;
+            default:
+                break;
+        }
         if (ranged)
         {
             Vector2 direction = (closestEnemy.position - muzzlePosition.position).normalized;

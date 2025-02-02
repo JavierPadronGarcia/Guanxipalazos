@@ -114,6 +114,7 @@ public class EnemyGunController : MonoBehaviour
 
         if (isMelee)
         {
+            AudioManager.instance.PlaySFX("EnemyStab");
             LayerMask playerLayerMask = LayerMask.GetMask("PlayerLayer");
             RaycastHit2D hit = Physics2D.Raycast(meleeRaycastOrigin.position, transform.right, raycastLength, playerLayerMask);
             if (hit.collider != null && hit.collider.CompareTag("Player"))
