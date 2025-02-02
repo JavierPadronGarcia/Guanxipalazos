@@ -21,35 +21,66 @@ public class CameraMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (players.Count == 0 || GameManager.gamePaused) return;
+        if (GameManager.gamePaused) return;
+
+        bool playersUpdated = false;
+
+        for (int i = 0; i < players.Count; i++)
+        {
+            if (players[i] == null)
+            {
+                playersUpdated = true;
+                break;
+            }
+        }
+
+        if (playersUpdated)
+        {
+            players.Clear();
+            GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
+
+            foreach (GameObject player in playerObjects)
+            {
+                if (player != null) players.Add(player.transform);
+            }
+        }
+
+        if (players.Count == 0) return;
 
         if (players.Count == 1)
         {
-            Vector3 targetPosition = players[0].transform.position + offset;
-            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * followSpeed);
-        }
-        else
-        {
-            transform.position = Vector3.Lerp(transform.position, positionBetweenPlayers.transform.position + offset, Time.deltaTime * followSpeed);
+            if (players[0] != null)
+            {
+                Vector3 targetPosition = players[0].position + offset;
+                transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * followSpeed);
 
-            float distance = Vector3.Distance(players[0].position, players[1].position);
-            float targetSize = Mathf.Clamp(distance + zoomPadding, minSize, maxSize);
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, Time.deltaTime * zoomSpeed);
+                cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 10f, Time.deltaTime * zoomSpeed);
+            }
+            positionBetweenPlayers.SetActive(false);
+        }
+        else if (players.Count == 2)
+        {
+            if (players[0] != null && players[1] != null)
+            {
+                transform.position = Vector3.Lerp(transform.position, positionBetweenPlayers.transform.position + offset, Time.deltaTime * followSpeed);
+
+                float distance = Vector3.Distance(players[0].position, players[1].position);
+                float targetSize = Mathf.Clamp(distance + zoomPadding, minSize, maxSize);
+                cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, Time.deltaTime * zoomSpeed);
+            }
         }
     }
 
     public void AddPlayer()
     {
-        if (GameManager.playerCount == 1)
+        players.Clear();
+        GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (GameObject player in playerObjects)
         {
-            Transform player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Transform>();
-            players.Add(player);
+            if (player != null) players.Add(player.transform);
         }
-        else if (GameManager.playerCount == 2)
-        {
-            Transform player = GameObject.FindGameObjectsWithTag("Player")[1].GetComponent<Transform>();
-            players.Add(player);
-            positionBetweenPlayers.SetActive(true);
-        }
+
+        positionBetweenPlayers.SetActive(players.Count == 2);
     }
 }

@@ -4,7 +4,7 @@ public class MiddlePositionPlayers : MonoBehaviour
 {
     private Transform[] players;
 
-    void Start()
+    void Awake()
     {
         GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
         players = new Transform[playerObjects.Length];
