@@ -903,7 +903,7 @@ MonoBehaviour:
   isBaseGun: 0
   canAppearMultipleTimes: 1
   gunName: 
-  money: 1
+  money: 15
   moneyText: {fileID: 5515974657389870757}
   moneySectionGameObject: {fileID: 4455560060800895835}
   itemBoughtGameObject: {fileID: 4949829523996600092}

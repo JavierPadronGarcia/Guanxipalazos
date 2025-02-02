@@ -902,7 +902,7 @@ MonoBehaviour:
   isBaseGun: 1
   canAppearMultipleTimes: 0
   gunName: magado
-  money: 80
+  money: 50
   moneyText: {fileID: 104220487953193571, guid: d303f48fc9b216e4a9925297cf8937b2, type: 3}
   moneySectionGameObject: {fileID: 6990026718402611640}
   itemBoughtGameObject: {fileID: 8078506440374128553}

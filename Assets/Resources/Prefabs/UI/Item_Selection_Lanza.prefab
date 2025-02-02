@@ -903,7 +903,7 @@ MonoBehaviour:
   isBaseGun: 1
   canAppearMultipleTimes: 0
   gunName: lanza
-  money: 1
+  money: 10
   moneyText: {fileID: 2101369324591796046}
   moneySectionGameObject: {fileID: 1543726506905547423}
   itemBoughtGameObject: {fileID: 2871846761294652128}

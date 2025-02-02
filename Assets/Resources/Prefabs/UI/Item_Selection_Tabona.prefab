@@ -770,7 +770,7 @@ MonoBehaviour:
   isBaseGun: 1
   canAppearMultipleTimes: 0
   gunName: tabona
-  money: 1
+  money: 25
   moneyText: {fileID: 104220487953193571}
   moneySectionGameObject: {fileID: 1726748434817017266}
   itemBoughtGameObject: {fileID: 5566426645724835004}
