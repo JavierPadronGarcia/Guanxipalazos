@@ -21,7 +21,7 @@ public class CameraMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (players.Count == 0) return;
+        if (players.Count == 0 || GameManager.gamePaused) return;
 
         if (players.Count == 1)
         {

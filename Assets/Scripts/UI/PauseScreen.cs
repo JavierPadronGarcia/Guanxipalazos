@@ -23,13 +23,7 @@ public class PauseScreen : MonoBehaviour
     public void ExitMainMenu()
     {
         Time.timeScale = 1f;
-        GameManager.gamePaused = false;
-        GameManager.gameStarted = false;
-        GameManager.playerCount = 0;
-        GameManager.isMultiplayer = false;
-        GameManager.isPlayer1Turn = false;
-        GameManager.selectedPlayer = 0;
-        GameManager.Coins = 0;
+        GameManager.ResetGame();
         SCManager.instance.LoadScene("MainMenu");
     }
 }

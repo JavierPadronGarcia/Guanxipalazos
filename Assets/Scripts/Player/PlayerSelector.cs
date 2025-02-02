@@ -59,7 +59,7 @@ public class PlayerSelection : MonoBehaviour
         GameManager.playerCount--;
         if (GameManager.gameStarted && GameManager.playerCount <= 0)
         {
-            Debug.Log("Has perdido");
+            SCManager.instance.LoadSceneAdd("DeathScreen");
         }
     }
 
