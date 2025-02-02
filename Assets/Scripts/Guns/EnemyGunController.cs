@@ -8,6 +8,7 @@ public class EnemyGunController : MonoBehaviour
     [SerializeField] float fireDistance = 10f;
     [SerializeField] int gunDamage = 10;
     [SerializeField] Animator anim;
+    [SerializeField] ParticleSystem shootParticles;
 
     [Header("Arma a distancia")]
     [SerializeField] GameObject muzzle;
@@ -85,6 +86,7 @@ public class EnemyGunController : MonoBehaviour
 
         if (!isMelee && projectile != null && muzzlePosition != null)
         {
+            if (!shootParticles.isPlaying) shootParticles.Play();
             var muzzleGo = Instantiate(muzzle, muzzlePosition.position, transform.rotation);
             muzzleGo.transform.SetParent(transform);
             Destroy(muzzleGo, 0.2f);
