@@ -770,7 +770,7 @@ MonoBehaviour:
   isBaseGun: 1
   canAppearMultipleTimes: 0
   gunName: lanzapiedras
-  money: 1
+  money: 5
   moneyText: {fileID: 104220487953193571}
   moneySectionGameObject: {fileID: 1726748434817017266}
   itemBoughtGameObject: {fileID: 6733884221706845476}

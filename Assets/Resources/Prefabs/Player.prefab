@@ -488,6 +488,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 8194532003753318964}
+    - target: {fileID: 840820885390824329, guid: 0d4f3ddce8bb39943b159ee73f87be03, type: 3}
+      propertyPath: gunDamage
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 2844140892724904276, guid: 0d4f3ddce8bb39943b159ee73f87be03, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -640,6 +644,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2439571904386532512, guid: 97d15b2601b0fdb4ab663ee15af36ca8, type: 3}
+      propertyPath: gunDamage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439571904386532512, guid: 97d15b2601b0fdb4ab663ee15af36ca8, type: 3}
       propertyPath: bulletSprite
       value: 
       objectReference: {fileID: 21300000, guid: 74ba207857a7fcd4caefa99fe3e276cf, type: 3}
@@ -690,6 +698,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 8194532003753318964}
+    - target: {fileID: 6136695168953935833, guid: 69a38ddc25075244b9cede8866871ebd, type: 3}
+      propertyPath: gunDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8789533951546766596, guid: 69a38ddc25075244b9cede8866871ebd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -773,6 +785,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 8194532003753318964}
+    - target: {fileID: 1899469540284002296, guid: 13e24cc3281db524ba6061bf943d4fba, type: 3}
+      propertyPath: gunDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3931392107783765285, guid: 13e24cc3281db524ba6061bf943d4fba, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
