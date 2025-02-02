@@ -17,32 +17,46 @@ public class EndRoundSceneCanvasController : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(continueButton);
         waveManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<WaveManager>();
+
         players = GameObject.FindGameObjectsWithTag("Player");
 
-        GameObject player = players[GameManager.isPlayer1Turn ? 0 : 1];
-        PlayerGunItemsController playerGunItemsController = player.GetComponent<PlayerGunItemsController>();
-
-        var dictionary = playerGunItemsController.activeGuns;
-
-        foreach (var possibleSelection in possiblePlayerSelections)
+        if (players.Length < 2)
         {
-            SelectionCardController selectionCardController = possibleSelection.GetComponent<SelectionCardController>();
-            if (selectionCardController.isBaseGun && dictionary.ContainsKey(selectionCardController.gunName))
+            UpdatePlayersAfterDeath();
+        }
+
+        if (players.Length == 0) return;
+
+        GameObject player = null;
+        if (GameManager.isPlayer1Turn && players.Length > 0)
+        {
+            player = players[0];
+        }
+        else if (!GameManager.isPlayer1Turn && players.Length > 1)
+        {
+            player = players[1];
+        }
+
+        if (player != null)
+        {
+            PlayerGunItemsController playerGunItemsController = player.GetComponent<PlayerGunItemsController>();
+            var dictionary = playerGunItemsController.activeGuns;
+
+            foreach (var possibleSelection in possiblePlayerSelections)
             {
-                selectionsToRemove.Add(possibleSelection);
+                SelectionCardController selectionCardController = possibleSelection.GetComponent<SelectionCardController>();
+                if (selectionCardController.isBaseGun && dictionary.ContainsKey(selectionCardController.gunName))
+                {
+                    selectionsToRemove.Add(possibleSelection);
+                }
             }
-        }
 
-        foreach (var selectionToRemove in selectionsToRemove)
-        {
-            possiblePlayerSelections.Remove(selectionToRemove);
-        }
+            foreach (var selectionToRemove in selectionsToRemove)
+            {
+                possiblePlayerSelections.Remove(selectionToRemove);
+            }
 
-        selectionsToRemove.Clear();
-
-        foreach (var possibleSelection in possiblePlayerSelections)
-        {
-            SelectionCardController selectionCardController = possibleSelection.GetComponent<SelectionCardController>();
+            selectionsToRemove.Clear();
         }
     }
 
@@ -84,40 +98,43 @@ public class EndRoundSceneCanvasController : MonoBehaviour
 
     public void HealPlayer(int healQuantity, int money)
     {
-        if (GameManager.isPlayer1Turn)
+        if (players.Length > 0)
         {
-            players[0].GetComponent<PlayerHealth>().RestoreHealth(healQuantity);
-        }
-        else
-        {
-            players[1].GetComponent<PlayerHealth>().RestoreHealth(healQuantity);
+            GameObject currentPlayer = GameManager.isPlayer1Turn ? players[0] : players[1];
+            currentPlayer.GetComponent<PlayerHealth>().RestoreHealth(healQuantity);
         }
         GameManager.Coins -= money;
     }
 
     public void BuyGun(string gunName, int money)
     {
-        if (GameManager.isPlayer1Turn)
+
+        if (players.Length > 0)
         {
-            players[0].GetComponent<PlayerGunItemsController>().ActivateGun(gunName);
-        }
-        else
-        {
-            players[1].GetComponent<PlayerGunItemsController>().ActivateGun(gunName);
+            GameObject currentPlayer = GameManager.isPlayer1Turn ? players[0] : players[1];
+            currentPlayer.GetComponent<PlayerGunItemsController>().ActivateGun(gunName);
         }
         GameManager.Coins -= money;
     }
 
     public void ImproveGun(ArmaMejoras gunImproves, string gunName, int money)
     {
-        if (GameManager.isPlayer1Turn)
+
+        if (players.Length > 0)
         {
-            players[0].GetComponent<PlayerGunItemsController>().UpgradeGun(gunName, gunImproves);
-        }
-        else
-        {
-            players[1].GetComponent<PlayerGunItemsController>().UpgradeGun(gunName, gunImproves);
+            GameObject currentPlayer = GameManager.isPlayer1Turn ? players[0] : players[1];
+            currentPlayer.GetComponent<PlayerGunItemsController>().UpgradeGun(gunName, gunImproves);
         }
         GameManager.Coins -= money;
+    }
+
+    private void UpdatePlayersAfterDeath()
+    {
+        players = GameObject.FindGameObjectsWithTag("Player");
+
+        if (players.Length == 1)
+        {
+            GameManager.isPlayer1Turn = true;
+        }
     }
 }
