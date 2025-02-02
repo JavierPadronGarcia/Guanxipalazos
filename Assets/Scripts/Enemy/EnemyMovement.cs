@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public ParticleSystem runParticles;
     public float velocity = 3f;
     public float targetDistance = 5f;
     public float rangeDistance = 10f;
@@ -15,11 +16,6 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         enemy = GetComponent<Enemy>();
-        if (enemy == null)
-        {
-            Debug.LogError("El script Enemy no está asignado al enemigo.");
-            return;
-        }
 
         player = enemy.target;
         animator = GetComponent<Animator>();
@@ -67,20 +63,24 @@ public class EnemyMovement : MonoBehaviour
 
     private void MoveToPlayer()
     {
+        if (!runParticles.isPlaying) runParticles.Play();
+
         Vector3 direction = (player.position - transform.position).normalized;
-        transform.position += direction * velocity * Time.deltaTime;
+        transform.position += Time.deltaTime * velocity * direction;
     }
 
     private void MoveAway()
     {
+        if (!runParticles.isPlaying) runParticles.Play();
         Vector3 directionAway = (transform.position - player.position).normalized;
-        transform.position += directionAway * velocity * Time.deltaTime;
+        transform.position += Time.deltaTime * velocity * directionAway;
     }
 
     private void SetIdleAnimation()
     {
         animator.SetBool("Run", false);
         animator.SetBool("Idle", true);
+        if (runParticles.isPlaying) runParticles.Stop();
     }
 
     private void SetRunAnimation()

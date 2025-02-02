@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    [SerializeField] GameObject muzzle;
     [SerializeField] Transform muzzlePosition;
     [SerializeField] GameObject projectile;
 
@@ -26,7 +25,7 @@ public class Gun : MonoBehaviour
     {
         timeSinceLastShot = fireRate;
 
-        if (muzzle)
+        if (muzzlePosition)
         {
             ranged = true;
         }
@@ -86,10 +85,6 @@ public class Gun : MonoBehaviour
         childAnimator.SetTrigger("Shoot");
         if (ranged)
         {
-            var muzzleGo = Instantiate(muzzle, muzzlePosition.position, transform.rotation);
-            muzzleGo.transform.SetParent(transform);
-            Destroy(muzzleGo, 0.5f);
-
             Vector2 direction = (closestEnemy.position - muzzlePosition.position).normalized;
             var projectileGo = Instantiate(projectile, muzzlePosition.position, transform.rotation);
             BulletController bulletController = projectileGo.GetComponent<BulletController>();
