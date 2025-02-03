@@ -2955,7 +2955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ayose
+  m_text: Ayoze
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
   m_sharedMaterial: {fileID: -7360773003746286752, guid: 11ae156c42e4a0c45935eeba53c67f69, type: 2}
