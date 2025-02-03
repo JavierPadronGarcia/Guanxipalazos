@@ -11,7 +11,6 @@ public class EnemyGunController : MonoBehaviour
     [SerializeField] ParticleSystem shootParticles;
 
     [Header("Arma a distancia")]
-    [SerializeField] GameObject muzzle;
     [SerializeField] Transform muzzlePosition;
     [SerializeField] GameObject projectile;
 
@@ -88,9 +87,6 @@ public class EnemyGunController : MonoBehaviour
         {
             AudioManager.instance.PlaySFX("Shoot");
             if (!shootParticles.isPlaying) shootParticles.Play();
-            var muzzleGo = Instantiate(muzzle, muzzlePosition.position, transform.rotation);
-            muzzleGo.transform.SetParent(transform);
-            Destroy(muzzleGo, 0.2f);
 
             Vector2 direction = (closestPlayer.position - muzzlePosition.position).normalized;
 
