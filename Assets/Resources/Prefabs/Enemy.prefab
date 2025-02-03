@@ -270,7 +270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2374279704999389279, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
       propertyPath: fireRate
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2374279704999389279, guid: d5ec9acd0ca568d4fb010abcb02ab69c, type: 3}
       propertyPath: fireDistance

@@ -73,7 +73,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (!runParticles.isPlaying) runParticles.Play();
         Vector3 directionAway = (transform.position - player.position).normalized;
-        transform.position += Time.deltaTime * velocity * directionAway;
+        transform.position += Time.deltaTime * (velocity/2) * directionAway;
     }
 
     private void SetIdleAnimation()
