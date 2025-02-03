@@ -8,6 +8,11 @@ public class CanvasController : MonoBehaviour
         SCManager.instance.LoadScene("MainGame");
     }
 
+    public void MainMenu()
+    {
+        SCManager.instance.LoadScene("MainMenu");
+    }
+
     public void NavigateLibrary()
     {
         SCManager.instance.LoadScene("Library");
