@@ -15,6 +15,7 @@ TagManager:
   - HPBar2
   - PlayerCollider
   - PositionBetweenPlayers
+  - CoinText
   layers:
   - Default
   - TransparentFX

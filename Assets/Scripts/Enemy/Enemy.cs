@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     private int currentHealth;
 
     public Transform target;
+    public ParticleSystem hitParticles;
     private GameObject[] players;
 
     public delegate void EnemyDeathEvent(Enemy enemy);
@@ -103,6 +104,7 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
         anim.SetTrigger("Hit");
+        hitParticles.Play();
 
         if (currentHealth <= 0)
         {

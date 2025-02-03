@@ -13,11 +13,11 @@ public class PlayerCoinManager : MonoBehaviour
     {
         if (boxCollider2D.IsTouching(collision) && collision.CompareTag("Coin"))
         {
-            int coinCount = Random.Range(1, 6);
+            int coinCount = Random.Range(1, 4);
             GameManager.Coins += coinCount;
             Debug.Log("Moneda recogida, total: " + GameManager.Coins);
             AudioManager.instance.PlaySFX("GrabItem");
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject.transform.parent.gameObject);
         }
     }
 }

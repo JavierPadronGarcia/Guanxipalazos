@@ -94,7 +94,7 @@ public class PlayerHealth : MonoBehaviour
 
             Debug.Log("Vida restaurada: " + health);
 
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject.transform.parent.gameObject);
         }
     }
 }
