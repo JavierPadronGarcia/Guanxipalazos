@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     public float targetDistance = 5f;
     public float rangeDistance = 10f;
 
-    public enum EnemyType { Melee, Ranged }
+    public enum EnemyType { Melee, Ranged, BOSS }
     public EnemyType enemyType;
     private Transform player;
     private Enemy enemy;
@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
         player = enemy.target;
         animator = GetComponent<Animator>();
 
-        if (enemyType == EnemyType.Melee)
+        if (enemyType == EnemyType.Melee || enemyType == EnemyType.BOSS)
         {
             SetRunAnimation();
         }
@@ -37,6 +37,9 @@ public class EnemyMovement : MonoBehaviour
                 break;
             case EnemyType.Ranged:
                 HandleRangedBehavior();
+                break;
+            case EnemyType.BOSS:
+                MoveToPlayer();
                 break;
         }
     }

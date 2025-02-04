@@ -19,6 +19,11 @@ public class EnemyGunController : MonoBehaviour
     [SerializeField] Transform meleeRaycastOrigin;
     [SerializeField] float raycastLength = 1.5f;
 
+    [Header("Arma Boss")]
+    [SerializeField] bool isBoss = false;
+    
+    
+
     private float timeSinceLastShot = 0f;
     private Transform parentPosition;
     private Transform closestPlayer;
@@ -81,7 +86,11 @@ public class EnemyGunController : MonoBehaviour
 
     private void Shoot()
     {
-        anim.SetTrigger("Shoot");
+
+        if (anim != null) 
+        {
+            anim.SetTrigger("Shoot");
+        }
 
         if (!isMelee && projectile != null && muzzlePosition != null)
         {
@@ -108,9 +117,23 @@ public class EnemyGunController : MonoBehaviour
             Destroy(projectileGo, 3);
         }
 
-        if (isMelee)
+        if (!isBoss && isMelee)
         {
             AudioManager.instance.PlaySFX("EnemyStab");
+            LayerMask playerLayerMask = LayerMask.GetMask("PlayerLayer");
+            RaycastHit2D hit = Physics2D.Raycast(meleeRaycastOrigin.position, transform.right, raycastLength, playerLayerMask);
+            if (hit.collider != null && hit.collider.CompareTag("Player"))
+            {
+                PlayerHealth playerHealth = hit.collider.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
+                {
+                    playerHealth.Hit(gunDamage);
+                }
+            }
+        }
+        if (isBoss && isMelee)
+        {
+            
             LayerMask playerLayerMask = LayerMask.GetMask("PlayerLayer");
             RaycastHit2D hit = Physics2D.Raycast(meleeRaycastOrigin.position, transform.right, raycastLength, playerLayerMask);
             if (hit.collider != null && hit.collider.CompareTag("Player"))

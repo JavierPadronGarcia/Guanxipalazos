@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -11,6 +12,7 @@ public class WaveManager : MonoBehaviour
     public TextMeshProUGUI roundCountText;
 
     public GameObject enemyPrefab;
+    public GameObject bossPrefab; // Enemigo especial que aparece cada 5 rondas
     public Vector2 spawnArea = new Vector2(10f, 10f);
     public int initialEnemiesPerWave = 5;
     public float spawnInterval = 2f;
@@ -41,7 +43,7 @@ public class WaveManager : MonoBehaviour
 
     public void EndWave()
     {
-        AudioManager.instance.StopAllSFX();
+        AudioManager.instance.StopSFX();
         waveActive = false;
         StopAllCoroutines();
         perlinHealsSpawner.StopCoroutines();
@@ -49,12 +51,10 @@ public class WaveManager : MonoBehaviour
         GameObject[] enemiesAlive = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] remainingBullets = GameObject.FindGameObjectsWithTag("Bullet");
         GameObject[] remainingHeals = GameObject.FindGameObjectsWithTag("Heal");
-        GameObject[] remainingCoins = GameObject.FindGameObjectsWithTag("Coin");
 
         foreach (var enemy in enemiesAlive) Destroy(enemy);
         foreach (var bullet in remainingBullets) Destroy(bullet);
-        foreach (var heal in remainingHeals) Destroy(heal.transform.parent.gameObject);
-        foreach (var coin in remainingCoins) Destroy(coin.transform.parent.gameObject);
+        foreach (var heal in remainingHeals) Destroy(heal);
 
         TogglePlayerMovement(false);
 
@@ -84,6 +84,10 @@ public class WaveManager : MonoBehaviour
         Debug.Log($"Iniciando oleada {currentWave}");
         StartCoroutine(WaveTimer());
         StartCoroutine(SpawnEnemies());
+        if (currentWave % 5 == 0) 
+        {
+            SpawnBoss();
+        }
         perlinHealsSpawner.StartNewWave();
     }
 
@@ -120,8 +124,6 @@ public class WaveManager : MonoBehaviour
         }
     }
 
-
-
     private IEnumerator SpawnEnemies()
     {
         int enemiesPerWave = initialEnemiesPerWave + (currentWave - 1) * enemiesIncrementPerWave;
@@ -143,13 +145,22 @@ public class WaveManager : MonoBehaviour
         Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
     }
 
+    private void SpawnBoss()
+    {
+        float x = Random.Range(-spawnArea.x / 2, spawnArea.x / 2);
+        float y = Random.Range(-spawnArea.y / 2, spawnArea.y / 2);
+        Vector2 spawnPosition = new Vector2(x, y);
+
+        Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
+        Debug.Log("¡Boss ha aparecido en la oleada " + currentWave + "!");
+    }
+
     private void TogglePlayerMovement(bool enable)
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
         foreach (GameObject player in players)
         {
-
             if (!enable)
             {
                 var rigidbody2D = player.GetComponent<Rigidbody2D>();

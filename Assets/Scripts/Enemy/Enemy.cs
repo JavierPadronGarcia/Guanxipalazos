@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     public Transform target;
     public ParticleSystem hitParticles;
     private GameObject[] players;
+    public bool isBoss;
 
     public delegate void EnemyDeathEvent(Enemy enemy);
     public event EnemyDeathEvent OnDeath;
@@ -74,8 +75,18 @@ public class Enemy : MonoBehaviour
             Vector3 direction = target.position - transform.position;
             direction.Normalize();
 
-            bool playerToTheRight = target.position.x > transform.position.x;
-            spriteRenderer.flipX = !playerToTheRight;
+
+
+            if (isBoss)
+            {
+                bool playerToTheRight = target.position.x > transform.position.x;
+                spriteRenderer.flipX = playerToTheRight;
+            }
+            else
+            {
+                bool playerToTheRight = target.position.x > transform.position.x;
+                spriteRenderer.flipX = !playerToTheRight;
+            }
         }
     }
 
