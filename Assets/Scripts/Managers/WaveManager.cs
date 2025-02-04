@@ -10,6 +10,7 @@ public class WaveManager : MonoBehaviour
     public string selectionMenuScene = "SelectionMenu";
     public TextMeshProUGUI waveTimerText;
     public TextMeshProUGUI roundCountText;
+    public TextMeshProUGUI bossAppearText;
 
     public GameObject enemyPrefab;
     public GameObject bossPrefab;
@@ -83,12 +84,10 @@ public class WaveManager : MonoBehaviour
 
         waveActive = true;
 
-        Debug.Log($"Iniciando oleada {currentWave}");
         StartCoroutine(WaveTimer());
         StartCoroutine(SpawnEnemies());
-        if (currentWave % 1 == 0) 
+        if (currentWave % 5 == 0)
         {
-            Debug.Log("Boss saliendo");
             SpawnBoss();
         }
         perlinHealsSpawner.StartNewWave();
@@ -155,7 +154,13 @@ public class WaveManager : MonoBehaviour
         Vector2 spawnPosition = new Vector2(x, y);
 
         Instantiate(bossPrefab, spawnPosition, Quaternion.identity);
-        Debug.Log("¡Boss ha aparecido en la oleada " + currentWave + "!");
+        bossAppearText.gameObject.SetActive(true);
+        Invoke(nameof(HideBossText), 2f);
+    }
+
+    private void HideBossText()
+    {
+        bossAppearText.gameObject.SetActive(false);
     }
 
     private void TogglePlayerMovement(bool enable)

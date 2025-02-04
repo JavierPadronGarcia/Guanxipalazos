@@ -27,6 +27,12 @@ public class EndRoundSceneCanvasController : MonoBehaviour
 
         if (players.Length == 0) return;
 
+        foreach (var onePlayer in players)
+        {
+            PlayerMovement movementScript = onePlayer.GetComponent<PlayerMovement>();
+            movementScript.StopRunning();
+        }
+
         GameObject player = null;
         if (GameManager.isPlayer1Turn && players.Length > 0)
         {

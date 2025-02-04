@@ -65,4 +65,10 @@ public class PlayerMovement : MonoBehaviour
         }
         anim.SetBool(name, true);
     }
+
+    public void StopRunning()
+    {
+        isRunning = false;
+        playerRunSource.Stop();
+    }
 }

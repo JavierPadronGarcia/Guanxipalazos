@@ -5179,6 +5179,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6368947734259149806, guid: 0a254e441f300d74daf8eccfcb3c6521, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368947734259149806, guid: 0a254e441f300d74daf8eccfcb3c6521, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -5302,7 +5306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3164056047717399985, guid: 0a254e441f300d74daf8eccfcb3c6521, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.28
+      value: -1.99
       objectReference: {fileID: 0}
     - target: {fileID: 3164056047717399985, guid: 0a254e441f300d74daf8eccfcb3c6521, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5335,6 +5339,14 @@ PrefabInstance:
     - target: {fileID: 3164056047717399985, guid: 0a254e441f300d74daf8eccfcb3c6521, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368947734259149806, guid: 0a254e441f300d74daf8eccfcb3c6521, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368947734259149806, guid: 0a254e441f300d74daf8eccfcb3c6521, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
