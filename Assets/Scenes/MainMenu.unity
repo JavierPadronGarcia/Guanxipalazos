@@ -2624,8 +2624,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98dee453a7dac049aacdc4d58ea5975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxSource: {fileID: 1530763690}
   musicSource: {fileID: 1530763691}
+  sfxSources: []
+  player1RunSource: {fileID: 0}
+  player2RunSource: {fileID: 0}
 --- !u!82 &1530763690
 AudioSource:
   m_ObjectHideFlags: 0

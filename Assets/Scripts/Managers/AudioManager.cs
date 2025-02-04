@@ -7,13 +7,9 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     public AudioSource musicSource;
-    private string currentSFX = "";
 
     public AudioSource[] sfxSources;
-    private int maxSfxSources = 10;
-
-    public AudioSource player1RunSource;
-    public AudioSource player2RunSource;
+    private int maxSfxSources = 3;
 
     public Dictionary<string, AudioClip> sfxClips = new Dictionary<string, AudioClip>();
     public Dictionary<string, AudioClip> musicClips = new Dictionary<string, AudioClip>();
@@ -30,12 +26,8 @@ public class AudioManager : MonoBehaviour
         for (int i = 0; i < sfxSources.Length; i++)
         {
             sfxSources[i] = gameObject.AddComponent<AudioSource>();
+            sfxSources[i].volume = 0.151f;
         }
-
-        player1RunSource = gameObject.AddComponent<AudioSource>();
-        player2RunSource = gameObject.AddComponent<AudioSource>();
-        player1RunSource.loop = true;
-        player2RunSource.loop = true;
 
         LoadSFXClips();
         LoadMusicClips();
@@ -51,7 +43,7 @@ public class AudioManager : MonoBehaviour
         sfxClips["Run"] = Resources.Load<AudioClip>("SFX/Running/Cartoon_Stomp");
         sfxClips["Shoot"] = Resources.Load<AudioClip>("SFX/Shooting/Cartoon_Shot");
         sfxClips["GrabItem"] = Resources.Load<AudioClip>("SFX/ItemGrab/Cartoon_Uncork");
-        sfxClips["Drink"] = Resources.Load<AudioClip>("SFX/Drinks/Open_Can");
+        sfxClips["Drink"] = Resources.Load<AudioClip>("SFX/Drinks/soda-can-open-183214");
         sfxClips["Knife"] = Resources.Load<AudioClip>("SFX/Stab/Knife_Stab");
         sfxClips["EnemyStab"] = Resources.Load<AudioClip>("SFX/Stab/Axe_Hit");
         sfxClips["LanceThrow"] = Resources.Load<AudioClip>("SFX/Throw/Throw_Lance");
@@ -132,35 +124,6 @@ public class AudioManager : MonoBehaviour
             {
                 source.Stop();
             }
-        }
-    }
-
-    public void PlayRunSFX(int playerID)
-    {
-        if (sfxClips.ContainsKey("Run"))
-        {
-            if (playerID == 1 && !player1RunSource.isPlaying)
-            {
-                player1RunSource.clip = sfxClips["Run"];
-                player1RunSource.Play();
-            }
-            else if (playerID == 2 && !player2RunSource.isPlaying)
-            {
-                player2RunSource.clip = sfxClips["Run"];
-                player2RunSource.Play();
-            }
-        }
-    }
-
-    public void StopRunSFX(int playerID)
-    {
-        if (playerID == 1 && player1RunSource.isPlaying)
-        {
-            player1RunSource.Stop();
-        }
-        else if (playerID == 2 && player2RunSource.isPlaying)
-        {
-            player2RunSource.Stop();
         }
     }
 }
