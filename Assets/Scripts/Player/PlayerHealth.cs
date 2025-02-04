@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     public float health = 100f;
+    public AudioSource healthItemSource;
 
     public Image PF;
 
@@ -72,16 +73,15 @@ public class PlayerHealth : MonoBehaviour
 
     public void RestoreHealth(float heal = 0)
     {
-        Debug.Log("Restaurando vida");
         if (heal == 0 || (health + heal) > maxHealth)
         {
             health = maxHealth;
         }
         else
         {
-            AudioManager.instance.PlaySFX("Drink");
             health += heal;
         }
+        healthItemSource.Play();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

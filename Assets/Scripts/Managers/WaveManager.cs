@@ -12,7 +12,7 @@ public class WaveManager : MonoBehaviour
     public TextMeshProUGUI roundCountText;
 
     public GameObject enemyPrefab;
-    public GameObject bossPrefab; // Enemigo especial que aparece cada 5 rondas
+    public GameObject bossPrefab;
     public Vector2 spawnArea = new Vector2(10f, 10f);
     public int initialEnemiesPerWave = 5;
     public float spawnInterval = 2f;
@@ -86,7 +86,7 @@ public class WaveManager : MonoBehaviour
         Debug.Log($"Iniciando oleada {currentWave}");
         StartCoroutine(WaveTimer());
         StartCoroutine(SpawnEnemies());
-        if (currentWave % 5 == 0) 
+        if (currentWave % 1 == 0) 
         {
             Debug.Log("Boss saliendo");
             SpawnBoss();

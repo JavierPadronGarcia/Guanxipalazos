@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb2D;
     private SpriteRenderer playerRenderer;
     private Animator anim;
-    private bool isRunningSoundPlaying = false;
+    private bool isRunning = false;
 
     private Vector2 movementInput = Vector2.zero;
 
@@ -37,22 +37,22 @@ public class PlayerMovement : MonoBehaviour
         if (move.x < 0) playerRenderer.flipX = true;
         else if (move.x > 0) playerRenderer.flipX = false;
 
-        if (move != Vector2.zero)
+        bool moving = move != Vector2.zero;
+
+        if (moving && !isRunning)
         {
+            isRunning = true;
             SetAnimation("running");
 
-            if (!isRunningSoundPlaying)
-            {
-                playerRunSource.Play();
-                isRunningSoundPlaying = true;
-            }
-
+            if (!playerRunSource.isPlaying) playerRunSource.Play();
             if (!runParticles.isPlaying) runParticles.Play();
         }
-        else
+        else if (!moving && isRunning)
         {
+            isRunning = false;
             SetAnimation("idle");
-            playerRunSource.Stop();
+
+            if (playerRunSource.isPlaying) playerRunSource.Stop();
             if (runParticles.isPlaying) runParticles.Stop();
         }
     }

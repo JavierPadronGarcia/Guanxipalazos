@@ -86,6 +86,8 @@ public class PlayerSelection : MonoBehaviour
         RoundManager.SetActive(true);
         CoinGroup.SetActive(true);
         RoundHelpers.SetActive(true);
+        player1Text.SetActive(false);
+        player2Text.SetActive(false);
 
         PlayerInputManager.instance.DisableJoining();
     }
