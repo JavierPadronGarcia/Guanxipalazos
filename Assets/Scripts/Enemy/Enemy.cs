@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
 
         // Inicializar el script EnemyMovement
         enemyMovementScript = GetComponent<EnemyMovement>();
-        enemyMovementScript.enemyType = (EnemyMovement.EnemyType)Random.Range(0, System.Enum.GetValues(typeof(EnemyMovement.EnemyType)).Length);
+        enemyMovementScript.enemyType = (EnemyMovement.EnemyType)Random.Range(0, System.Enum.GetValues(typeof(EnemyMovement.EnemyType)).Length - 1);
         if (enemyMovementScript == null)
         {
             Debug.LogError("No se encontró el componente EnemyMovement en el GameObject.");

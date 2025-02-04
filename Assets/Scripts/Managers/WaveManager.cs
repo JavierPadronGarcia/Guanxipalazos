@@ -43,7 +43,7 @@ public class WaveManager : MonoBehaviour
 
     public void EndWave()
     {
-        AudioManager.instance.StopSFX();
+        AudioManager.instance.StopAllSFX();
         waveActive = false;
         StopAllCoroutines();
         perlinHealsSpawner.StopCoroutines();
@@ -51,10 +51,12 @@ public class WaveManager : MonoBehaviour
         GameObject[] enemiesAlive = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] remainingBullets = GameObject.FindGameObjectsWithTag("Bullet");
         GameObject[] remainingHeals = GameObject.FindGameObjectsWithTag("Heal");
+        GameObject[] remainingCoins = GameObject.FindGameObjectsWithTag("Coin");
 
         foreach (var enemy in enemiesAlive) Destroy(enemy);
         foreach (var bullet in remainingBullets) Destroy(bullet);
-        foreach (var heal in remainingHeals) Destroy(heal);
+        foreach (var heal in remainingHeals) Destroy(heal.transform.parent.gameObject);
+        foreach (var coin in remainingCoins) Destroy(coin.transform.parent.gameObject);
 
         TogglePlayerMovement(false);
 
@@ -86,6 +88,7 @@ public class WaveManager : MonoBehaviour
         StartCoroutine(SpawnEnemies());
         if (currentWave % 5 == 0) 
         {
+            Debug.Log("Boss saliendo");
             SpawnBoss();
         }
         perlinHealsSpawner.StartNewWave();
