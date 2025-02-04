@@ -8,6 +8,11 @@ public class PauseScreen : MonoBehaviour
 
     private void Start()
     {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var player in players)
+        {
+            player.GetComponent<PlayerMovement>().StopRunning();
+        }
         Time.timeScale = 0f;
         GameManager.gamePaused = true;
         EventSystem.current.SetSelectedGameObject(FirstSelectedButton);
