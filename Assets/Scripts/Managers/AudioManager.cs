@@ -43,7 +43,8 @@ public class AudioManager : MonoBehaviour
         sfxClips["Run"] = Resources.Load<AudioClip>("SFX/Running/Cartoon_Stomp");
         sfxClips["Shoot"] = Resources.Load<AudioClip>("SFX/Shooting/Cartoon_Shot");
         sfxClips["GrabItem"] = Resources.Load<AudioClip>("SFX/ItemGrab/Cartoon_Uncork");
-        sfxClips["Drink"] = Resources.Load<AudioClip>("SFX/Drinks/soda-can-open-183214");
+        sfxClips["Drink"] = Resources.Load<AudioClip>("SFX/Drinks/SodaBottle1");
+        //sfxClips["Drink2"] = Resources.Load<AudioClip>("SFX/Drinks/SodaBottle2");
         sfxClips["Knife"] = Resources.Load<AudioClip>("SFX/Stab/Knife_Stab");
         sfxClips["EnemyStab"] = Resources.Load<AudioClip>("SFX/Stab/Axe_Hit");
         sfxClips["LanceThrow"] = Resources.Load<AudioClip>("SFX/Throw/Throw_Lance");
